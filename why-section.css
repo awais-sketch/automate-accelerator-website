@@ -1,0 +1,368 @@
+/* ============================================================
+   Why Automate Accelerator — v2 "flex-expand" panel rail.
+   Imported into the landing page from the standalone build.
+   Dark editorial band; panels expand on hover/click, ghost
+   numerals, orange rule dividers. Self-contained: defines its own
+   --ease and reuses the site's --orange. Loaded on index.html.
+   ============================================================ */
+.why-section {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 1;
+  padding: 100px 24px 108px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(244,121,32,0.12), transparent 30%),
+    radial-gradient(circle at 88% 82%, rgba(255,255,255,0.06), transparent 34%),
+    linear-gradient(150deg, #0E0A38 0%, #1B1259 46%, #34247E 100%);
+  overflow: hidden;
+}
+
+.why-wrap {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.why-intro {
+  max-width: 640px;
+}
+
+.why-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+  font-weight: 500;
+}
+
+.why-label::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--orange);
+}
+
+.why-intro h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.9vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.why-intro p {
+  margin: 20px 0 0;
+  max-width: 480px;
+  font-size: 17px;
+  line-height: 1.58;
+  color: rgba(255,255,255,0.66);
+  font-weight: 500;
+}
+
+/* ---- Desktop: horizontal flex-expand panel rail ---- */
+.why-panels {
+  display: flex;
+  align-items: stretch;
+  height: 460px;
+  margin: 56px 0 0;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
+}
+
+.why-panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 26px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(255,255,255,0.10);
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  overflow: hidden;
+  /* Per-property transitions: the expand (flex-grow/background) stays
+     instant-to-respond, while the entrance (opacity/transform) carries
+     the staggered --pd delay so it slides in without slowing the hover. */
+  transition-property: flex-grow, background, opacity, transform;
+  transition-duration: 680ms, 680ms, 720ms, 720ms;
+  transition-timing-function: var(--ease), var(--ease), var(--ease), var(--ease);
+  transition-delay: 0ms, 0ms, var(--pd, 0ms), var(--pd, 0ms);
+}
+
+.why-panel:last-child {
+  border-right: none;
+}
+
+.why-panel.active {
+  flex: 2.85 1 0;
+  background:
+    linear-gradient(180deg, rgba(244,121,32,0.10), rgba(244,121,32,0.03) 60%);
+}
+
+.why-panel-index {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: clamp(90px, 11vw, 148px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  color: rgba(255,255,255,0.22);
+  pointer-events: none;
+  transition: transform 700ms var(--ease), color 700ms var(--ease);
+  transform: scale(1) translateY(0);
+}
+
+.why-panel.active .why-panel-index {
+  color: rgba(244,121,32,0.6);
+  transform: scale(1.06) translateY(-4px);
+}
+
+.why-panel-chevron {
+  display: none;
+}
+
+/* Collapsed label: reads top-to-bottom along the narrow rail */
+.why-panel-label-collapsed {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 15px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.82);
+  font-weight: 600;
+  max-height: 320px;
+  opacity: 1;
+  transition: opacity 260ms var(--ease);
+}
+
+.why-panel.active .why-panel-label-collapsed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Expanded content: cross-fades in with blur + rise */
+.why-panel-expanded {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 30px 32px;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(10px);
+  transition:
+    opacity 460ms var(--ease) 160ms,
+    filter 460ms var(--ease) 160ms,
+    transform 460ms var(--ease) 160ms;
+  pointer-events: none;
+}
+
+.why-panel.active .why-panel-expanded {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.why-panel-expanded-inner {
+  display: block;
+}
+
+.why-panel-rule {
+  display: block;
+  width: 26px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--orange);
+  margin-bottom: 16px;
+}
+
+.why-panel-index-small {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: rgba(244,121,32,0.95);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.why-panel-title {
+  display: block;
+  margin: 0 0 12px;
+  font-size: clamp(19px, 1.6vw, 23px);
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  font-weight: 600;
+  max-width: 340px;
+}
+
+.why-panel-body {
+  display: block;
+  margin: 0;
+  max-width: 400px;
+  font-size: 15px;
+  line-height: 1.62;
+  color: rgba(255,255,255,0.70);
+  font-weight: 500;
+}
+
+.why-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 720ms var(--ease),
+    transform 720ms var(--ease);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.why-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The panel rail does not fade as one block — each panel slides up in
+   sequence for a smooth staggered entrance. */
+.why-panels.why-reveal { opacity: 1; transform: none; transition: none; }
+.why-panels .why-panel { opacity: 0; transform: translateY(26px); }
+.why-panels.visible .why-panel { opacity: 1; transform: translateY(0); }
+.why-panels .why-panel:nth-child(1) { --pd: 140ms; }
+.why-panels .why-panel:nth-child(2) { --pd: 250ms; }
+.why-panels .why-panel:nth-child(3) { --pd: 360ms; }
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .why-panels { height: 420px; }
+  .why-panel-index { font-size: clamp(80px, 10vw, 120px); }
+}
+
+/* ---- Tablet / mobile: vertical stacked accordion ---- */
+@media (max-width: 900px) {
+  .why-section { padding: 56px 18px 56px; }
+  .why-intro { max-width: 100%; }
+
+  .why-panels {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 22px;
+  }
+
+  .why-panel {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    padding: 20px 52px 20px 20px;
+    min-height: 76px;
+    justify-content: flex-start;
+  }
+
+  .why-panel:last-child { border-bottom: none; }
+
+  .why-panel-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.22);
+    color: rgba(255,255,255,0.72);
+    transition:
+      transform 380ms var(--ease),
+      background 380ms var(--ease),
+      border-color 380ms var(--ease),
+      color 380ms var(--ease);
+  }
+
+  .why-panel-chevron svg { width: 13px; height: 13px; }
+
+  .why-panel.active .why-panel-chevron {
+    transform: rotate(180deg);
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #1c1440;
+  }
+
+  .why-panel-index {
+    position: static;
+    font-size: 34px;
+    color: rgba(244,121,32,0.55);
+    margin-bottom: 6px;
+    transform: none !important;
+  }
+
+  .why-panel.active .why-panel-index { color: var(--orange); }
+
+  .why-panel-label-collapsed {
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin-top: 0;
+    font-size: 17px;
+    max-height: none;
+    opacity: 1;
+  }
+
+  .why-panel.active .why-panel-label-collapsed {
+    opacity: 1;
+    pointer-events: auto;
+    color: #ffffff;
+  }
+
+  .why-panel-expanded {
+    position: static;
+    inset: auto;
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 0;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: grid-template-rows 420ms var(--ease);
+  }
+
+  .why-panel.active .why-panel-expanded {
+    grid-template-rows: 1fr;
+    margin-top: 14px;
+  }
+
+  .why-panel-expanded > .why-panel-expanded-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .why-panel-rule { display: none; }
+  .why-panel-index-small { display: none; }
+  .why-panel-title { display: none; }
+
+  .why-panel-body {
+    max-width: 100%;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-panel-index { font-size: 28px; }
+  .why-panel-label-collapsed { font-size: 16px; }
+  .why-panel-body { font-size: 14px; }
+}

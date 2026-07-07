@@ -1,0 +1,14 @@
+/* ============================================================
+   Automate Accelerator — 3D tilt cards
+   Vanilla, self-perspective take on the Aceternity <CardContainer/>.
+   card3d.js adds .is3d and drives the transform, so this file only
+   lifts the shadow while tilting and hands the transform to JS by
+   dropping it from the card's CSS transition. No overflow, perspective
+   or transform-style changes — cards stay perfectly flat/aligned at
+   rest and every card tilts around its own centre. Loaded per page.
+   ============================================================ */
+.is3d{
+  transition:box-shadow .3s ease !important;   /* rAF owns 'transform' */
+  will-change:transform;
+}
+.is3d.tilting{ box-shadow:0 34px 66px -30px rgba(34,27,78,.5) !important; }

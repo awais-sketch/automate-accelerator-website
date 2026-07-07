@@ -1,0 +1,12 @@
+/* ============================================================
+   Automate Accelerator — Magnetic CTA buttons
+   Vanilla recreation of the Aceternity <MagneticButton/> effect
+   for this static site. magnetic.js adds the .magnetic class and
+   drives the pull; this file just hands the transform to JS by
+   dropping transform from the button's CSS transition.
+   Loaded only on index.html. Touch pointers are skipped in JS.
+   ============================================================ */
+.magnetic{
+  transition:box-shadow .18s ease;   /* note: no 'transform' here — rAF owns it */
+  will-change:transform;
+}

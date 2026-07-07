@@ -1,132 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Book a discovery call | Automate Accelerator</title>
-  <meta name="description" content="Book a 30-minute discovery call with Automate Accelerator. Transparent conversation, no obligation — or reach us by email and phone. Melbourne-based, serving Australian B2B." />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Book a 30-minute discovery call with Automate Accelerator. A transparent conversation that leaves you with clarity on the right move, regardless of whether we work together.">
+<meta property="og:title" content="Contact | Book a 30-Minute Discovery Call with Automate Accelerator">
+<meta property="og:description" content="Book a 30-minute discovery call with Automate Accelerator. A transparent conversation that leaves you with clarity on the right move, regardless of whether we work together.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automate Accelerator">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#221B4E">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<title>Contact | Book a 30-Minute Discovery Call with Automate Accelerator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="motion-plus.css">
+<link rel="stylesheet" href="magnetic.css">
+<link rel="stylesheet" href="card3d.css">
+<style>
+/* Booking call-to-action card (scoped to contact page) */
+.book-card{margin-top:44px;border:1px solid var(--line);border-radius:20px;background:#fff;
+  padding:44px 44px;text-align:center;position:relative;overflow:hidden;
+  box-shadow:0 1px 2px rgba(34,27,78,.04),0 34px 70px -44px rgba(34,27,78,.30),0 18px 60px -34px rgba(244,121,32,.16)}
+.book-card::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 55% 65% at 50% 0%, rgba(244,121,32,.10), transparent 62%)}
+.book-card>*{position:relative}
+.book-card .bc-badge{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--purple);background:var(--mist);border:1px solid var(--line);border-radius:99px;
+  padding:6px 14px;display:inline-block;margin-bottom:18px}
+.book-card h2{font-size:clamp(24px,2.8vw,32px);max-width:20ch;margin:0 auto 12px}
+.book-card p.bc-lead{font-size:16.5px;max-width:56ch;margin:0 auto 12px;color:var(--body-c)}
+.book-card .bc-meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 28px}
+.book-card .bc-meta span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  color:#6B6787;border:1px solid var(--line);border-radius:99px;padding:8px 16px;background:#fff}
+.book-card .btn-primary{font-size:17px;padding:17px 36px}
+.book-card .bc-note{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:#8A85A6}
+.book-card .bc-note a{color:var(--purple);font-weight:600}
+/* Inline booking calendar (concentric with the card: 20px card radius, 14px inner, ~6px visual gap) */
+.bc-embed{margin-top:6px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.bc-embed iframe{display:block;width:100%;height:760px;border:0}
+@media (max-width:560px){ .bc-embed iframe{height:640px} }
+/* Direct-reach cards: make the link colour obvious and clickable */
+.contact-cards .card a{color:var(--purple);font-weight:600;text-decoration:none}
+.contact-cards .card a:hover{text-decoration:underline}
+@media (max-width:560px){ .book-card{padding:34px 24px} }
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
-<body id="top">
-  <nav class="nav"><div class="wrap navin">
-    <a href="design-1-revenue-os.html" class="brand"><img src="assets/brand/aa-logo.png" alt="Automate Accelerator" class="brand-logo"></a>
-    <div class="links">
-      <a href="design-1-revenue-os.html">Home</a>
-      <a href="growth-engine.html">Services</a>
-      <a href="ai-solutions.html">AI</a>
-      <a href="data.html">Data</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html" class="current">Contact Us</a>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" aria-label="Automate Accelerator home"><img src="AA-logo-dark.png" alt="Automate Accelerator"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a class="btn btn-primary" href="contact.html">Book a discovery call</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- 1 · BOOK A CALL (page hero) -->
+<section class="page-hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Book a call</span>
+    <h1>Let us find out if <span class="si">we are right for each other.</span></h1>
+    <p class="lead">Thirty minutes. A transparent conversation. You leave with clarity on what the right move is, regardless of whether we work together.</p>
+    <div class="book-card">
+      <span class="bc-badge">Discovery call</span>
+      <h2>Book your 30-minute discovery call.</h2>
+      <p class="bc-lead">Pick a time that suits you and speak directly with a named account manager. No form to fill in, no redirect, no obligation.</p>
+      <div class="bc-meta">
+        <span>30 minutes</span>
+        <span>No obligation</span>
+        <span>No sales pressure</span>
+      </div>
+      <div class="bc-embed"><iframe src="https://www.calendar.automateaccelerator.com/narayan-calendar" title="Book a discovery call with Automate Accelerator" loading="lazy"></iframe></div>
+      <p class="bc-note">Calendar not loading? <a href="https://www.calendar.automateaccelerator.com/narayan-calendar" target="_blank" rel="noopener">Open it in a new tab &rarr;</a> Prefer email or phone? Every direct channel is listed just below.</p>
     </div>
-    <div class="nav-end"><a class="btn" href="#book">Book a discovery call →</a></div>
-  </div></nav>
+  </div>
+</section>
 
-  <main>
-    <!-- BOOK A CALL -->
-    <section class="hero" id="book">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Book a call</div>
-          <h1>Let's find out if we're <span class="gradient-text">right for each other.</span></h1>
-          <p class="lead">Thirty minutes. A transparent conversation about your pipeline and goals. You leave with clarity — whether or not we work together.</p>
-          <p class="hero-note"><span>● No obligation</span> No sales pressure. Useful either way.</p>
-        </div>
-        <div class="booking reveal-right">
-          <span class="booking-icon"><img src="assets/generated/contact-page-icons/booking.png" alt="Booking calendar icon"></span>
-          <h3>Pick a time that suits you</h3>
-          <p>A 30-minute discovery call, on your schedule. Open the calendar and grab a slot that works for you.</p>
-          <div><a class="btn" href="https://www.calendar.automateaccelerator.com/narayan-calendar" target="_blank" rel="noopener">Book a discovery call →</a></div>
-        </div>
-      </div>
-    </section>
+<!-- 2 · REACH OUT DIRECTLY -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Prefer to reach out directly?</span>
+    <h2 class="sec">Reach us any way you like.</h2>
+    <p class="sec-intro">A dedicated team, an Australian company with its own office in India, ready to talk on your terms. Choose the channel that suits you and we will come back to you promptly.</p>
+    <div class="contact-cards">
+      <div class="card rv"><span class="ico"><svg
+  class="lucide lucide-mail"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+</svg></span><h3>Email</h3><p><a href="mailto:support@automateaccelerator.com">support@automateaccelerator.com</a></p></div>
+      <div class="card rv"><span class="ico"><svg
+  class="lucide lucide-phone"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+</svg></span><h3>Phone</h3><p><a href="tel:+61488849450">+61 488 849 450</a></p></div>
+      <div class="card rv"><span class="ico"><svg
+  class="lucide lucide-map-pin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle cx="12" cy="10" r="3" />
+</svg></span><h3>Office address</h3><p>Suite 1, Level 10, 3 Bowen Crescent, Melbourne VIC 3004</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- REACH OUT DIRECTLY -->
-    <section id="reach">
-      <div class="wrap">
-        <div class="head reveal">
-          <div>
-            <div class="kicker">Reach out directly</div>
-            <h2>Prefer to talk first?</h2>
-          </div>
-          <p class="sub">However you'd rather start, we're easy to reach — and quick to reply.</p>
-        </div>
-        <div class="contact-cards stagger">
-          <div class="ccard reveal-up" style="--i:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><b>Email</b><a href="mailto:support@automateaccelerator.com">support@automateaccelerator.com</a></div>
-          <div class="ccard reveal-up" style="--i:1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><b>Phone</b><a href="tel:+61488849450">+61 488 849 450</a></div>
-          <div class="ccard reveal-up" style="--i:2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><b>Office</b><span>Suite 1, Level 10, 3 Bowen Crescent, Melbourne VIC 3004</span></div>
-        </div>
-      </div>
-    </section>
+<!-- 3 · WHAT TO EXPECT -->
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">What to expect</span>
+    <h2 class="sec">What happens on the discovery call.</h2>
+    <p class="sec-intro">A clear, four-step conversation designed to give you useful clarity, not a pitch.</p>
+    <div class="step-list">
+      <div class="step rv"><div class="n">01</div><div><h3>We listen first</h3><p>You tell us about your business, your current situation, and what growth looks like for you. No interruptions, no pitching, no agenda.</p></div></div>
+      <div class="step rv"><div class="n">02</div><div><h3>We ask the right questions</h3><p>Not to qualify you out, but to understand exactly where the biggest opportunity sits and which product makes sense for your situation.</p></div></div>
+      <div class="step rv"><div class="n">03</div><div><h3>We give you a clear picture</h3><p>Which product makes sense for your business, what the outcomes look like, and a complete strategy tailored to your situation, delivered after the call.</p></div></div>
+      <div class="step rv"><div class="n">04</div><div><h3>You receive a detailed review</h3><p>Within twenty-four hours of the call you receive a detailed review of our conversation, a clear recommendation, and how we can move forward, in writing. No obligation to proceed.</p></div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- WHAT TO EXPECT -->
-    <section id="expect" class="dark">
-      <div class="wrap">
-        <div class="head reveal">
-          <div>
-            <div class="kicker">What to expect</div>
-            <h2>No pitch deck. A real conversation.</h2>
-          </div>
-          <p class="sub">Here's exactly how the discovery call works — so there are no surprises.</p>
-        </div>
-        <div class="steps stagger">
-          <div class="step reveal-up" style="--i:0"><b>Step 01</b><h3>We listen first</h3><p>You talk, we listen. We want to understand your business, your buyer and your goal before anything else.</p></div>
-          <div class="step reveal-up" style="--i:1"><b>Step 02</b><h3>We ask the right questions</h3><p>Sharp, specific questions to find where the real opportunity — and the friction — actually is.</p></div>
-          <div class="step reveal-up" style="--i:2"><b>Step 03</b><h3>We give you a clear picture</h3><p>An honest view of what we'd build, what it looks like, and what you can realistically expect.</p></div>
-          <div class="step reveal-up" style="--i:3"><b>Step 04</b><h3>A detailed review in 24 hours</h3><p>After the call you receive a written review of what we discussed and proposed — within 24 hours.</p></div>
-        </div>
-      </div>
-    </section>
+<!-- 4 · READY WHEN YOU ARE -->
+<section class="final">
+  <div class="wrap">
+    <h2>Pick a time. We will take it from there.</h2>
+    <p style="margin-top:18px">No obligation after the call. No lock-in after the brief. The team you meet is the team you work with from day one.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-primary" href="https://www.calendar.automateaccelerator.com/narayan-calendar" target="_blank" rel="noopener">Book a discovery call</a>
+      <a class="btn btn-ghost" href="services.html">See what we do</a>
+    </div>
+  </div>
+</section>
 
-    <!-- READY WHEN YOU ARE -->
-    <section class="cta" id="ready">
-      <div class="wrap reveal">
-        <div class="cta-panel">
-          <div class="kicker">Ready when you are</div>
-          <h2>Pick a time. We'll take it from there.</h2>
-          <p>One short conversation is all it takes to find out if we're the right partner for your growth.</p>
-          <div class="cta-actions">
-            <a class="btn" href="https://www.calendar.automateaccelerator.com/narayan-calendar" target="_blank" rel="noopener">Book a discovery call →</a>
-            <a class="btn btn-on-dark" href="growth-engine.html">See what we do</a>
-          </div>
-        </div>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="AA-logo-dark.png" alt="Automate Accelerator">
+        <p>Your outbound partner, not your outbound agency.</p>
+        <p style="margin-top:10px;font-family:var(--mono);font-size:12px">Trusted by 850+ Australian businesses since 2021.</p>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="design-1-revenue-os.html" class="brand"><img src="assets/brand/aa-logo.png" alt="Automate Accelerator" class="brand-logo"></a>
-        <p>Your outbound partner, not your outbound agency. Australian B2B growth — human-led, performance-focused and AI-scaled since 2021.</p>
+      <div>
+        <h4>Sitemap</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="ai.html">AI</a></li><li><a href="data.html">Data</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       </div>
-      <div class="footer-col"><h4>What we do</h4>
-        <a href="growth-engine.html">Growth Engine</a>
-        <a href="ai-solutions.html">AI Solutions</a>
-        <a href="data.html">Data</a>
-        <a href="case-studies.html">Case Studies</a>
+      <div>
+        <h4>Work with us</h4>
+        <ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="services.html">See the Growth Engine</a></li><li><a href="ai.html">See AI Solutions</a></li><li><a href="case-studies.html">See our results</a></li></ul>
       </div>
-      <div class="footer-col"><h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="design-1-revenue-os.html#industries">Industries</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="design-1-revenue-os.html">Home</a>
-      </div>
-      <div class="footer-col"><h4>Get in touch</h4>
-        <a href="mailto:support@automateaccelerator.com">support@automateaccelerator.com</a>
-        <a href="tel:+61488849450">+61 488 849 450</a>
-        <span>Suite 1, Level 10, 3 Bowen Crescent, Melbourne VIC 3004</span>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="mailto:support@automateaccelerator.com">support@automateaccelerator.com</a></li>
+          <li><a href="tel:+61488849450">+61 488 849 450</a></li>
+          <li>Suite 1, Level 10, 3 Bowen Crescent,<br>Melbourne VIC 3004</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Automate Accelerator · automateaccelerator.com</span>
-      <span class="tag">Human-led · Performance-focused · AI-scaled</span>
+    <div class="foot-bar">
+      <span>© 2026 Automate Accelerator. All rights reserved.</span>
+      <span><a href="terms.html">Terms and Conditions</a> · <a href="privacy.html">Privacy Policy</a></span>
     </div>
-  </div></footer>
-  <script src="assets/site.js"></script>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="app.js" defer></script>
+<script src="motion-plus.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="magnetic.js" defer></script>
+<script src="card3d.js" defer></script>
 </body>
 </html>

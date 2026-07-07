@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Not all AI is the same. AI runs inside every Growth Engine campaign, and our solution architects build custom AI systems directly inside your business operations. Your data, your credentials, your control.">
+<meta property="og:title" content="AI | How Automate Accelerator Uses AI, and What We Build">
+<meta property="og:description" content="Not all AI is the same. AI runs inside every Growth Engine campaign, and our solution architects build custom AI systems directly inside your business operations. Your data, your credentials, your control.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automate Accelerator">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#221B4E">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<title>AI | How Automate Accelerator Uses AI, and What We Build</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="motion-plus.css">
+<link rel="stylesheet" href="magnetic.css">
+<style>
+  /* Page-scoped helpers for the AI page only. No edits to styles.css. */
+  .layer-cta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-weight:700;font-size:15px}
+  .path.growth .layer-cta{color:var(--orange-deep)}
+  .path.ai .layer-cta{color:var(--purple)}
+  .svc-block .svc-sub{font-size:15px}
+  .ba-grid{display:grid;gap:26px;margin-top:8px}
+  /* Numbers band: five stats with a supporting line each */
+  .metrics.m5 .wrap{grid-template-columns:repeat(5,1fr);align-items:start}
+  .metrics.m5 .metric{padding:0 6px}
+  .metrics.m5 .metric small{display:block;margin-top:12px;font-size:12.5px;line-height:1.55;color:#C8C3E4;font-weight:400;letter-spacing:0;text-transform:none;font-family:var(--sans,inherit)}
+  @media(max-width:900px){.metrics.m5 .wrap{grid-template-columns:1fr 1fr;gap:30px 26px}}
+  @media(max-width:560px){.metrics.m5 .wrap{grid-template-columns:1fr}}
+  .num-intro{padding-bottom:14px}
+</style>
+<style>
+/* Provider logo chips (authentic brand marks, monochrome to match the strip) */
+.tools-band .tool{display:inline-flex;align-items:center;gap:8px}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" aria-label="Automate Accelerator home"><img src="AA-logo-dark.png" alt="Automate Accelerator"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="ai.html" style="color:var(--orange-deep)">AI</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a class="btn btn-primary" href="contact.html">Book a discovery call</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- 1 · HERO -->
+<section class="page-hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">The AI story</span>
+    <h1>Not all AI is the same. <span class="si">Here is how we use it.</span></h1>
+    <p class="lead">If you have been pitched AI several times this year and none of it worked, this page is for you. A question we get on every call is where AI fits in our work, and the answer is much simpler than the market makes it sound.</p>
+    <p class="lead">We do not use AI to replace the human touch. We use it to find the right person at the right moment, automate what slows your team down, and build systems that work while you sleep.</p>
+    <p class="lead" style="color:var(--purple);font-weight:600">AI is not coming, it is already running inside the businesses competing with yours. Every month spent waiting is ground you do not get back.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#layers">See the two layers</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · TOOLS WE USE -->
+<div class="tools-band">
+  <p class="t-label">Built on the world's leading AI platforms</p>
+  <div class="tool-row">
+    <span class="tool"><img src="assets/tech/openai-c.png" alt="" loading="lazy">OpenAI</span><span class="tool"><img src="assets/tech/anthropic-c.png" alt="" loading="lazy">Anthropic Claude</span><span class="tool"><img src="assets/tech/gemini-c.png" alt="" loading="lazy">Google Gemini</span><span class="tool"><img src="assets/tech/deepgram-c.png" alt="" loading="lazy">Deepgram</span><span class="tool"><img src="assets/tech/deepseek-c.png" alt="" loading="lazy">Deepseek</span><span class="tool"><img src="assets/tech/kimi-c.png" alt="" loading="lazy">Kimi AI</span>
+  </div>
+  <p class="t-label">Works with the tools your business already uses</p>
+  <div class="tool-row">
+    <span class="tool"><img src="assets/tech/gohighlevel.png" alt="" loading="lazy">Go High Level</span><span class="tool"><img src="assets/tech/hubspot.png" alt="" loading="lazy">HubSpot</span><span class="tool"><img src="assets/tech/salesforce.png" alt="" loading="lazy">Salesforce</span><span class="tool"><img src="assets/tech/xero-c.png" alt="" loading="lazy">Xero</span><span class="tool"><img src="assets/tech/myob-c.png" alt="" loading="lazy">MYOB</span><span class="tool"><img src="assets/tech/shopify-c.png" alt="" loading="lazy">Shopify</span><span class="tool"><img src="assets/tech/slack-c.png" alt="" loading="lazy">Slack</span><span class="tool"><img src="assets/tech/teams-c.png" alt="" loading="lazy">Microsoft Teams</span><span class="tool"><img src="assets/tech/zoom-c.png" alt="" loading="lazy">Zoom</span><span class="tool"><img src="assets/tech/gworkspace-c.png" alt="" loading="lazy">Google Workspace</span><span class="tool"><img src="assets/tech/outlook-c.png" alt="" loading="lazy">Outlook</span><span class="tool"><img src="assets/tech/zapier-c.png" alt="" loading="lazy">Zapier</span><span class="tool"><img src="assets/tech/airtable-c.png" alt="" loading="lazy">Airtable</span><span class="tool"><img src="assets/tech/monday.png" alt="" loading="lazy">Monday.com</span><span class="tool"><img src="assets/tech/make-c.png" alt="" loading="lazy">Make.com</span><span class="tool"><img src="assets/tech/n8n-c.png" alt="" loading="lazy">n8n</span><span class="tool">and hundreds more</span>
+  </div>
+</div>
+
+<!-- 3 · AI LIVES IN TWO PLACES -->
+<section id="layers">
+  <div class="wrap">
+    <span class="eyebrow">AI lives in two places</span>
+    <h2 class="sec">AI for your growth. AI for your work.</h2>
+    <p class="sec-intro">Two distinct places AI shows up at Automate Accelerator. Different team, different output, different engagement. Read both before you decide which one you need.</p>
+    <div class="paths">
+      <div class="path growth rv">
+        <p class="p-for">Layer 01 · AI inside the Growth Engine</p>
+        <h3>AI inside the Growth Engine</h3>
+        <p class="p-lead">Multiplying what our team can do.</p>
+        <ul>
+          <li>AI runs inside Growth Engine campaigns, multiplying what our team can do.</li>
+          <li>You do not manage it. You do not configure it.</li>
+          <li>More of the right people reached, faster, without losing the human touch.</li>
+          <li>Bundled with every Growth Engine engagement.</li>
+        </ul>
+        <a class="layer-cta" href="services.html">See the Growth Engine →</a>
+      </div>
+      <div class="path ai rv">
+        <p class="p-for">Layer 02 · AI Solutions</p>
+        <h3>AI Solutions</h3>
+        <p class="p-lead">Built inside your business, not around it.</p>
+        <ul>
+          <li>Our solution architects and developers build a custom AI system directly into your existing business operations, separate from your outbound campaigns.</li>
+          <li>Your data. Your credentials. Your control.</li>
+          <li>If your team repeats the same task more than ten times, we can automate it.</li>
+          <li>We build it, prove it works, and hand it over. You own it from day one.</li>
+        </ul>
+        <a class="layer-cta" href="#how">See AI Solutions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · AI SOLUTIONS · DISCOVER, BUILD, DELIVER -->
+<section class="problem" id="how">
+  <div class="wrap">
+    <span class="eyebrow">AI Solutions · Discover, Build, Deliver</span>
+    <h2 class="sec">AI built inside your business. Not around it.</h2>
+    <p class="sec-intro">Most businesses have already tried a chatbot. Maybe a dashboard. Maybe a tool that promised to save time and created more of it instead. That is not what we build. Our solution architects and developers map your internal operations, identify where AI removes the most friction, and build it directly into your existing systems. Your data. Your credentials. Your control. We build it and hand it over.</p>
+    <div class="step-list">
+      <div class="step rv"><div class="n">01</div><div><h3>Discover</h3><p>We audit your workflows and find the friction. Our team analyses your daily operations to find the repetitive tasks costing you time and overhead, and documents every finding in a clear strategic brief before a single line of code is written.</p></div></div>
+      <div class="step rv"><div class="n">02</div><div><h3>Build</h3><p>We write the code and run the tests. Our developers build the custom AI integration directly inside your current systems. Every build is scoped, rigorously tested under strict guardrails, and completely approved by you before it ever goes live.</p></div></div>
+      <div class="step rv"><div class="n">03</div><div><h3>Deliver</h3><p>We hand over the keys and support your scale. The system goes live with zero disruption to your daily operations. Your team gets full ownership of the data and logic from day one, while we stay close for ongoing performance reviews.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · WHAT WE BUILD -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">What we build</span>
+    <h2 class="sec">AI that executes. Solutions built for operational excellence.</h2>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-file-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+      <h3>Document Intelligence</h3>
+      <p class="svc-sub">Contracts, invoices and proposals extracted, classified and routed automatically.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>A contract arrives. Someone reads it, pulls out the relevant information, and enters it manually into your system. Three people. Four steps. Two hours. Every single time.</div>
+        <div class="a"><span class="tag">After</span>The document arrives. AI reads it, classifies it, and extracts every relevant field. It routes the data and logs everything without anyone touching it. Two minutes. Zero manual handling.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-git-branch" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg></span>
+      <h3>AI Triage</h3>
+      <p class="svc-sub">Inbound requests sorted, prioritised and assigned without human intervention.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Every support request lands in the same inbox. Someone reads each one, decides how urgent it is, figures out who should handle it, and forwards it manually. The urgent ones wait alongside the routine ones. Things fall through.</div>
+        <div class="a"><span class="tag">After</span>Every inbound request is read and classified by urgency and type. The system assigns it to the right person automatically. Urgent issues escalate immediately. Nothing falls through the cracks.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-chart-column" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+      <h3>Internal Reporting</h3>
+      <p class="svc-sub">Dashboards and reports that build themselves from live data.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Every Monday someone spends four hours pulling data from three different systems, formatting it into a report, and sending it out. By the time it lands, the data is already out of date.</div>
+        <div class="a"><span class="tag">After</span>The report builds itself from live data and lands in every inbox automatically. Real numbers. Right time. Nobody wastes their Monday morning on manual data entry.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-workflow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></span>
+      <h3>Workflow Automation</h3>
+      <p class="svc-sub">Supplier ordering, procurement and onboarding flows running end to end.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Supplier orders run on memory and WhatsApp messages. New clients onboard across different systems that require manual updates every time. The process is slow and prone to error.</div>
+        <div class="a"><span class="tag">After</span>Supplier orders trigger automatically based on the right signals. New clients onboard across every system in minutes with no one running the process. Your team focuses on work that moves the business.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-bot" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
+      <h3>Custom AI Agents</h3>
+      <p class="svc-sub">Bespoke builds designed specifically for your internal operations.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Your team has a task that requires reading context, making a judgement, and pulling from multiple sources. It takes two hours and cannot be templated. It depends entirely on manual effort.</div>
+        <div class="a"><span class="tag">After</span>A custom AI agent works inside your existing systems. It is trained on your data, your logic, and your standards. Your team reviews the output. Two hours of manual work become ten minutes of oversight.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · THE ARCHITECTURAL FRAMEWORK -->
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">The architectural framework</span>
+    <h2 class="sec">Professional logic. Built for the B2B world.</h2>
+    <p class="sec-intro">Serious AI engineering, explained in plain English. This is the framework underneath every build.</p>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-cpu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span>
+      <h3>Agentic Workflow</h3>
+      <p class="svc-sub">Systems that do not just suggest answers, they execute multi-step processes.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>You use basic AI that can only answer questions. It cannot execute tasks or follow a process. You are stuck in a loop of chatting without getting actual work done.</div>
+        <div class="a"><span class="tag">After</span>We build agentic workflows that execute entire business processes. The AI does not just suggest, it acts, updates, and completes the work for you.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-target" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+      <h3>Agent Harnessing</h3>
+      <p class="svc-sub">Advanced reasoning controls that bind the AI to your business rules.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>You deal with unpredictable AI outputs. The logic is loose and the AI often goes off-track or loses focus on the primary business objective.</div>
+        <div class="a"><span class="tag">After</span>We use agent harnessing to control the AI logic. We bind the AI to your specific business reasoning so it stays focused on the exact outcome you need.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-sparkles" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></span>
+      <h3>AI Skills</h3>
+      <p class="svc-sub">Specialised intelligence trained on your specific standards and data.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Your team spends hours teaching generic AI about your industry every single day. The AI has no memory of your standards, your data, or your past decisions.</div>
+        <div class="a"><span class="tag">After</span>We build specific AI skills into your operation. Whether it is procurement or onboarding, the AI is a specialist pre-trained on your logic and your data.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <h3>Guardrails</h3>
+      <p class="svc-sub">Professional scaffolding that ensures safety, accuracy and brand protection.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>You risk your brand reputation on unverified AI responses. There is no safety net to stop the AI from making errors or sharing incorrect data.</div>
+        <div class="a"><span class="tag">After</span>We build professional guardrails and scaffolding into every workflow. This ensures that every AI interaction is professional, accurate, and safe for your brand.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CUSTOM DEVELOPMENT -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Custom development</span>
+    <h2 class="sec">The unified brain. Custom interfaces for your entire stack.</h2>
+    <p class="sec-intro">Professional interfaces built on the tools your business already trusts, connecting your entire stack into one system.</p>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-network" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg></span>
+      <h3>Custom Orchestration</h3>
+      <p class="svc-sub">The central engine connecting your AI directly into your CRM and ERP.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Your team operates across disconnected tools. Staff spend their day copy-pasting data between browser tabs and manual spreadsheets.</div>
+        <div class="a"><span class="tag">After</span>We build custom orchestration using n8n, Make.com and modern orchestration frameworks. We connect your AI into your CRM so your entire stack works as one unified system.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-layout-dashboard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span>
+      <h3>Web Platforms</h3>
+      <p class="svc-sub">Professional interfaces built on the tools your business already trusts.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>You are forced to adapt your business to fit someone else's software. You deal with tech fatigue and confusing platforms that your team struggles to manage.</div>
+        <div class="a"><span class="tag">After</span>Our developers deliver custom builds across Next.js, WordPress, Webflow, Shopify, or a custom CMS designed specifically for your team's workflow.</div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>
+      <h3>Mobile and Integrations</h3>
+      <p class="svc-sub">High-performance connectivity for a modern, fast-paced workforce.</p>
+      <div class="ba">
+        <div class="b"><span class="tag">Before</span>Your team is tied to their desks because your internal tools do not work on the move. You lack the mobile connectivity required for a modern team.</div>
+        <div class="a"><span class="tag">After</span>We build high-performance mobile apps using Flutter cross-platform. We handle all integrations across the modern stack so your business runs from anywhere.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · VOICE AI -->
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">Voice AI</span>
+    <h2 class="sec">Natural language AI. Real conversations, around the clock.</h2>
+    <p class="sec-intro">Voice AI handles the calls your team cannot get to: high-volume outreach, late-night enquiries, and weekend leads that usually go cold. Our natural language AI speaks with the accent your market understands and handles the overflow by booking meetings directly into your calendar, 24 hours a day.</p>
+    <div class="two-col">
+      <div class="svc-block rv" style="margin-top:0">
+        <span class="ico"><svg class="lucide lucide-mic" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg></span>
+        <h3>Voice AI · Inbound</h3>
+        <div class="ba">
+          <div class="b"><span class="tag">Before</span>Your buyer calls at 6:30pm or on the weekend. Nobody answers. They leave a voicemail. By morning they have moved on, and so has the opportunity.</div>
+          <div class="a"><span class="tag">After</span>Natural language AI answers every call the moment it arrives, available 24/7 with the accent your market speaks. It qualifies the caller, captures the details, and books the meeting. It hands off the call seamlessly when the conversation needs a human touch.</div>
+        </div>
+      </div>
+      <div class="svc-block rv" style="margin-top:0">
+        <span class="ico"><svg class="lucide lucide-signal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg></span>
+        <h3>Voice AI · Outbound</h3>
+        <div class="ba">
+          <div class="b"><span class="tag">Before</span>Your verified buyer list has thousands of contacts. Your human team reaches sixty people a day. The rest wait, and the overflow means opportunities go cold before anyone gets to them.</div>
+          <div class="a"><span class="tag">After</span>Natural language AI reaches hundreds of verified prospects every day. It introduces your offer, qualifies interest, and books the meeting. AI handles the volume and hands warm prospects directly to your human team.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-block rv">
+      <span class="ico"><svg class="lucide lucide-handshake" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
+      <h3>The Voice AI outcome</h3>
+      <p class="svc-sub">Our natural language AI integrates with your operations to:</p>
+      <ul>
+        <li>Handle inbound enquiries 24/7, so you never miss a call outside business hours.</li>
+        <li>Manage high-volume outbound dialling to ensure no missed opportunities across your buyer list.</li>
+        <li>Qualify interest and route warm, ready-to-buy prospects directly to your team.</li>
+        <li>Hand off the conversation to a human seamlessly the moment a personal touch is required.</li>
+      </ul>
+      <p style="margin-top:22px"><a class="btn btn-primary" href="contact.html">Book a discovery call</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · THE NUMBERS -->
+<section class="num-intro">
+  <div class="wrap">
+    <span class="eyebrow">The numbers</span>
+    <h2 class="sec">What we have delivered for our clients.</h2>
+    <p class="sec-intro">Aggregated across our client engagements.</p>
+  </div>
+</section>
+<div class="metrics m5">
+  <div class="wrap">
+    <div class="metric rv"><b>10-15 hrs</b><span>Time returned per person every week</span><small>The hours your people spend on repetitive tasks, data entry, report building and document processing, handed back. Every week.</small></div>
+    <div class="metric rv"><b>50-60%</b><span>Reduction in operational costs</span><small>When AI handles the processing, coordination and admin layer, the cost of running those functions drops significantly.</small></div>
+    <div class="metric rv"><b>80-90%</b><span>Reduction in data errors</span><small>AI agents do not get tired, distracted or inconsistent. Data drift, rework and misrouted tasks drop to near zero.</small></div>
+    <div class="metric rv"><b>20-40%</b><span>Revenue impact recovered</span><small>Automated follow-ups, faster response times and better pipeline visibility mean fewer deals fall through the cracks.</small></div>
+    <div class="metric rv"><b>30-60%</b><span>Better client experience</span><small>Faster response times and higher SLA compliance translate directly into measurably higher client satisfaction scores.</small></div>
+  </div>
+</div>
+
+<!-- 10 · QUESTIONS WE GET ON EVERY CALL -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Questions we get on every call</span>
+    <h2 class="sec">The questions we get on every discovery call. Answered honestly.</h2>
+    <div class="faq">
+      <details class="rv"><summary>Where does AI fit in what Automate Accelerator does?</summary><div class="fa">Two places. Inside every Growth Engine campaign as a built-in layer that multiplies what our professional team can do, more reach, more personalisation, more follow-up at scale. And as a standalone AI Solutions engagement where we build AI directly inside your own business operations. Two distinct things. Nothing in between.</div></details>
+      <details class="rv"><summary>Do I need AI Solutions or the Growth Engine?</summary><div class="fa">If you want more qualified meetings and a professional team running your outbound, the Growth Engine. If you have internal workflows costing your team time and money that repeat more than ten times, AI Solutions. If you need both, we can scope both. If neither is right, we will tell you that on the discovery call.</div></details>
+      <details class="rv"><summary>Will AI replace my team?</summary><div class="fa">No. AI handles the repetitive, rules-based layer. Your people focus on the work that requires judgement, relationships and creativity. Every Automate Accelerator engagement is built around your human team, not around replacing it.</div></details>
+      <details class="rv"><summary>How long does it take to build?</summary><div class="fa">Every AI Solutions engagement is scoped individually. You receive a clear timeline as part of the strategy before you commit. What we can tell you is that nothing goes live until you have tested it and approved it.</div></details>
+      <details class="rv"><summary>What does it cost?</summary><div class="fa">AI Solutions is scoped by project. You receive a clear plan and price after the discovery call. No retainer for activity. No surprises after you say yes.</div></details>
+      <details class="rv"><summary>Do you work with businesses outside Australia?</summary><div class="fa">Yes. Automate Accelerator has active engagements across Australia and globally. The system works wherever your buyers are.</div></details>
+      <details class="rv"><summary>What if it does not work?</summary><div class="fa">Every AI Solutions build comes with a testing and proof stage before anything goes live. We do not invoice for outcomes that have not been demonstrated.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Ready to see where AI fits in your business?</h2>
+    <p style="margin-top:18px">A quick discovery call. We will tell you exactly which tasks AI should solve, which ones it should not, and what a build would look like for your operations. No obligation. No sales pressure. You leave with useful clarity and strategic insight regardless of whether we work together.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
+      <a class="btn btn-ghost" href="case-studies.html">See our results</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="AA-logo-dark.png" alt="Automate Accelerator">
+        <p>Your outbound partner, not your outbound agency.</p>
+        <p style="margin-top:10px;font-family:var(--mono);font-size:12px">Trusted by 850+ Australian businesses since 2021.</p>
+      </div>
+      <div>
+        <h4>Sitemap</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="ai.html">AI</a></li><li><a href="data.html">Data</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+      </div>
+      <div>
+        <h4>Work with us</h4>
+        <ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="services.html">See the Growth Engine</a></li><li><a href="ai.html">See AI Solutions</a></li><li><a href="case-studies.html">See our results</a></li></ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="mailto:support@automateaccelerator.com">support@automateaccelerator.com</a></li>
+          <li><a href="tel:+61488849450">+61 488 849 450</a></li>
+          <li>Suite 1, Level 10, 3 Bowen Crescent,<br>Melbourne VIC 3004</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>© 2026 Automate Accelerator. All rights reserved.</span>
+      <span><a href="terms.html">Terms and Conditions</a> · <a href="privacy.html">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="app.js" defer></script>
+<script src="motion-plus.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="magnetic.js" defer></script>
+</body>
+</html>

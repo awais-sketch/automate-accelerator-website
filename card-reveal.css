@@ -1,0 +1,21 @@
+/* ============================================================
+   Card entrance reveal — the SAME blur + rise + fade as the hero
+   heading words. Each card starts blurred and slightly low, then
+   sharpens into place as it scrolls into view. card-reveal.js adds
+   .card-reveal to each card and .in when it enters the viewport.
+   Runs regardless of reduced-motion (by request). Loaded per page.
+   ============================================================ */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(4px);
+  transition:
+    opacity .5s ease-in-out,
+    transform .5s ease-in-out,
+    filter .5s ease-in-out;
+}
+.card-reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}

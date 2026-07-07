@@ -17,11 +17,12 @@ h1,h2,h3,h4{color:var(--ink);font-weight:800;line-height:1.12;letter-spacing:-.0
 section{padding:88px 0;position:relative}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:500;display:block;margin-bottom:18px}
 .sec-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:#B7B2CE;position:absolute;top:34px;right:24px;text-transform:uppercase}
-.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14.5px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;letter-spacing:-.01em}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14.5px;text-decoration:none;transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s ease,background .2s ease;letter-spacing:-.01em}
 .btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 26px -12px rgba(244,121,32,.55)}
-.btn-primary:hover{background:var(--orange-deep);transform:translateY(-2px)}
+.btn-primary:hover{background:var(--orange-deep);transform:translateY(-3px);box-shadow:0 18px 36px -14px rgba(244,121,32,.72)}
 .btn-ghost{color:var(--purple);border:1.5px solid var(--line);background:#fff}
-.btn-ghost:hover{border-color:var(--purple);transform:translateY(-2px)}
+.btn-ghost:hover{border-color:var(--purple);transform:translateY(-3px);box-shadow:0 14px 28px -16px rgba(34,27,78,.32)}
+.btn:active{transform:translateY(-1px)}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--purple);outline-offset:3px;border-radius:6px}
 
 /* Header */
@@ -98,7 +99,7 @@ header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:bl
 .card .k{width:34px;height:4px;border-radius:2px;background:var(--orange);margin-bottom:18px}
 .problem{background:var(--mist)}
 h2.sec{font-size:clamp(28px,3.4vw,40px);max-width:30ch;text-wrap:balance}
-.sec-intro{font-size:17.5px;max-width:52ch;margin-top:16px;text-wrap:pretty}
+.sec-intro{font-size:19px;max-width:52ch;margin-top:16px;text-wrap:pretty}
 
 /* Two paths */
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
@@ -189,8 +190,6 @@ footer a:hover{color:#fff}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
-  .logo-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;gap:8px 0}
-  .logo-set+.logo-set{display:none}
   .f-bar i{transition:none}
 }
 @media (max-width:960px){
@@ -216,7 +215,7 @@ footer a:hover{color:#fff}
 .page-hero .hero-ctas{margin-top:30px}
 .chapter{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);font-weight:500;display:block;margin-bottom:14px}
 .quote-pull{border-left:4px solid var(--orange);background:var(--mist);border-radius:0 12px 12px 0;padding:20px 26px;font-weight:600;color:var(--ink);font-size:16.5px;margin-top:30px;max-width:70ch}
-.svc-block{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 34px;margin-top:26px}
+.svc-block{background:#fff;border:1px solid var(--line);border-radius:16px;padding:38px 40px;margin-top:26px}
 .svc-block h3{font-size:21px;margin-bottom:6px}
 .svc-block .svc-sub{font-weight:600;color:var(--purple);margin-bottom:14px}
 .svc-block ul{list-style:none;margin-top:14px}
@@ -536,8 +535,8 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
   display:flex;flex-direction:column;align-items:center;justify-content:center}
 .tcard::before{content:"\201C";font-family:'Instrument Serif',Georgia,serif;color:var(--orange);
   font-size:66px;line-height:.55;display:block;margin-bottom:20px}
-.tcard p{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;
-  font-size:clamp(20px,2.4vw,27px);color:var(--ink);line-height:1.45;text-wrap:balance}
+.tcard p{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;
+  font-size:clamp(18px,1.9vw,22px);color:var(--ink);line-height:1.58;letter-spacing:-.01em;text-wrap:balance}
 .tcard .t-logo{height:34px;max-width:130px;object-fit:contain;margin-top:26px}
 .tcard .t-logo+.who{margin-top:12px}
 .tcard .who{margin-top:26px;font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;
@@ -645,7 +644,9 @@ body{overflow-x:clip}
   transform:translateY(-4px);box-shadow:0 26px 50px -34px rgba(34,27,78,.34);border-color:#D8D4EA}
 
 /* Service / solution blocks: a focal accent edge + stronger header (breaks the long-list monotony) */
-.svc-block{position:relative;padding-left:38px;overflow:hidden}
+.svc-block{position:relative;padding-left:44px;overflow:hidden}
+/* keep the pull-quote aligned with the rest of the card content (was centered) */
+.svc-block .quote-pull{margin-left:0;margin-right:0;max-width:none}
 .svc-block::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
   background:linear-gradient(180deg,var(--orange),var(--orange-deep))}
 .svc-block h3{font-size:22px;letter-spacing:-.02em}
@@ -757,11 +758,11 @@ p{text-wrap:pretty}
    ============================================================ */
 .page-hero .wrap,.cs-hero .wrap{text-align:center}
 .page-hero h1,.cs-hero h1{margin-left:auto;margin-right:auto}
-.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto}
+.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto;text-wrap:pretty;text-align:justify}
 .page-hero .hero-ctas,.cs-hero .hero-ctas{justify-content:center}
 .eyebrow,.chapter{text-align:center}
 h2.sec{text-align:center;margin-left:auto;margin-right:auto}
-section>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto}
+section>.wrap>.sec-intro{text-align:justify;margin-left:auto;margin-right:auto}
 .quote-pull{margin-left:auto;margin-right:auto}
 .industries .wrap{text-align:center}
 .ind-grid{justify-content:center}

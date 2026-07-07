@@ -10,26 +10,25 @@
   if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
   var groups = [
-    { sel: '.card',                   max: 8 },   // small feature cards
-    { sel: '.svc-block, .case, .vid', max: 6 }    // larger content cards
+    { sel: '.card', max: 8, speed: 0.18 }   // small feature cards only (big content cards stay static)
   ];
 
   groups.forEach(function(g){
     [].forEach.call(document.querySelectorAll(g.sel), function(card){
       if(card.classList.contains('is3d')) return;   // avoid double-binding
       card.classList.add('is3d');
-      attachTilt(card, g.max);
+      attachTilt(card, g.max, g.speed);
     });
   });
 
-  function attachTilt(card, MAX){
+  function attachTilt(card, MAX, SPEED){
     var raf = null;
     var curX = 0, curY = 0;   // current rotation (deg)
     var tgtX = 0, tgtY = 0;   // target rotation (deg)
 
     function frame(){
-      curX += (tgtX - curX) * 0.18;
-      curY += (tgtY - curY) * 0.18;
+      curX += (tgtX - curX) * SPEED;
+      curY += (tgtY - curY) * SPEED;
       card.style.transform =
         'perspective(900px) rotateX(' + curY.toFixed(2) + 'deg) rotateY(' + curX.toFixed(2) + 'deg)';
       if(Math.abs(tgtX - curX) > 0.04 || Math.abs(tgtY - curY) > 0.04){

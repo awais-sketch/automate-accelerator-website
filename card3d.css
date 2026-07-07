@@ -9,6 +9,11 @@
    ============================================================ */
 .is3d{
   transition:box-shadow .3s ease !important;   /* rAF owns 'transform' */
+  backface-visibility:hidden;
+}
+/* Promote to a GPU layer only while actually tilting — a permanent
+   will-change on every card created dozens of layers and janked scroll. */
+.is3d.tilting{
+  box-shadow:0 34px 66px -30px rgba(34,27,78,.5) !important;
   will-change:transform;
 }
-.is3d.tilting{ box-shadow:0 34px 66px -30px rgba(34,27,78,.5) !important; }

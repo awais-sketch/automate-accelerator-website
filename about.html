@@ -31,7 +31,7 @@
   .about-hero .lead-pull{color:var(--purple);font-weight:600;font-size:18.5px;margin-top:20px;max-width:56ch}
   /* story paragraphs stack on the page axis (was a 2-col row fighting the
      centred layout) */
-  .story-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:64ch;margin:20px auto 0}
+  .story-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:40rem;margin:20px 0 0}
   .diff-close{background:var(--ink);border:1px solid var(--ink);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 20px 44px -26px rgba(34,27,78,.5)}
   .diff-close .ico{background:rgba(244,121,32,.16);color:var(--orange)}
   @media(max-width:900px){.diff-close{grid-column:1/-1}}
@@ -42,13 +42,14 @@
   .disc b{color:var(--purple);font-family:var(--mono);font-size:12px;font-weight:500;margin-right:8px}
   .team-close{margin-top:30px;font-size:18px;font-weight:700;color:var(--ink)}
   @media (max-width:760px){ .story-grid{grid-template-columns:1fr} }
-  /* Centred editorial layout: headings and intros sit on the page axis;
-     card grids and the two-column story body keep their own alignment */
+  /* Hero stays centred; section headers sit on the content-left edge so the
+     eyebrow, heading and intro line up with the cards/rows beneath them */
   .about-hero .wrap{text-align:center}
   .about-hero h1,.about-hero .lead,.about-hero .lead-pull{margin-left:auto;margin-right:auto}
-  section>.wrap>.eyebrow{text-align:center}
-  h2.sec{text-align:center;margin-left:auto;margin-right:auto}
-  section>.wrap>.sec-intro{text-align:justify;margin-left:auto;margin-right:auto}
+  section>.wrap>.eyebrow{text-align:left;max-width:40rem;margin-left:0;margin-right:auto}
+  .about-hero>.wrap>.eyebrow{text-align:center;max-width:none;margin-left:auto}
+  h2.sec{text-align:left;max-width:40rem;margin-left:0;margin-right:auto}
+  section>.wrap>.sec-intro{text-align:justify;max-width:40rem;margin-left:0;margin-right:auto}
   .story-grid .sec-intro{text-align:justify}
   .quote-pull{margin-left:auto;margin-right:auto}
   .disc-row{justify-content:center}

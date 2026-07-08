@@ -209,7 +209,7 @@ footer a:hover{color:#fff}
 /* ===== Inner-page components ===== */
 .page-hero{padding:72px 0 56px;background:linear-gradient(180deg,var(--paper) 0%,var(--mist) 100%)}
 .page-hero h1{font-size:clamp(37px,4.7vw,58px);max-width:26ch}
-.page-hero p.lead{font-size:17.5px;max-width:62ch;margin-top:18px}
+.page-hero p.lead{font-size:17.5px;max-width:48ch;margin-top:18px}
 /* services hero only: keep the subheading narrower than the heading */
 .page-hero.svc-hero p.lead{max-width:40ch}
 .page-hero .hero-ctas{margin-top:30px}

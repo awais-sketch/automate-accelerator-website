@@ -460,7 +460,7 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 /* No scrim in the Axion look — dark text sits directly on the light shader. */
 .home-hero::after{content:none}
 .home-hero .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
-.home-hero .hero-grid > div{width:100%;max-width:960px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.home-hero .hero-grid > div{width:100%;max-width:1120px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 /* Reference-style eyebrow: plain small coral label, no dash, centered. */
 .home-hero .eyebrow{color:#E8704E;margin-bottom:26px;text-align:center;letter-spacing:.22em;font-size:11.5px}
 .home-hero .eyebrow::before{display:none}
@@ -469,7 +469,7 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
    events, which don't trigger native text selection, so there's no highlight-block issue. */
 .home-hero{-webkit-user-select:text;user-select:text}
 /* Heading: clean, tight, bold, centered (Fractal-style). */
-.home-hero h1{color:#111018;font-weight:700;font-size:clamp(31px,4.4vw,54px);line-height:1.16;letter-spacing:-.032em;text-wrap:balance}
+.home-hero h1{color:#111018;font-weight:700;font-size:clamp(32px,5vw,78px);line-height:1.14;letter-spacing:-.032em;text-wrap:balance}
 .home-hero h1 .hl{display:block}
 /* Heading line sizes: first two lines large, third line smaller. */
 .home-hero h1 .hl:nth-child(1){font-size:1em}

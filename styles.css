@@ -446,32 +446,51 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 }
 
 /* ===== Home hero v3: dark stage + animated isometric engine ===== */
-.home-hero{background:linear-gradient(160deg,#120E2B 0%,#221B4E 52%,#2E2168 100%);padding:96px 0 88px;position:relative;overflow:hidden}
-.home-hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(ellipse 55% 65% at 85% 20%, rgba(244,121,32,.13), transparent 62%),
-  radial-gradient(ellipse 45% 55% at 5% 90%, rgba(90,68,188,.28), transparent 60%),
-  radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);
-  background-size:auto,auto,30px 30px;
+/* Axion hero (exact spec): light gray base with the animated shader overlay on top. */
+.home-hero{background:#EFEFEF;padding:0;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.home-hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);background-size:30px 30px;
   -webkit-mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4));mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4))}
-.home-hero .wrap{position:relative}
-.home-hero .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
-.home-hero .eyebrow{color:#F4A468}
-.home-hero .eyebrow::before{background:var(--orange)}
-.home-hero h1{color:#fff;font-size:clamp(33px,3.4vw,47px)}
+.home-hero .wrap{position:relative;z-index:3;width:100%}
+/* Animated shader background (mounted by the module script in index.html).
+   Fades in over the light #EFEFEF base; dark hero text sits on top (no scrim). */
+.home-hero .hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
+.home-hero .hero-shader.is-ready{opacity:1}
+.home-hero .hero-shader canvas{position:absolute;inset:0;display:block;width:100%!important;height:100%!important}
+/* No scrim in the Axion look — dark text sits directly on the light shader. */
+.home-hero::after{content:none}
+.home-hero .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
+.home-hero .hero-grid > div{width:100%;max-width:960px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+/* Reference-style eyebrow: plain small coral label, no dash, centered. */
+.home-hero .eyebrow{color:#E8704E;margin-bottom:26px;text-align:center;letter-spacing:.22em;font-size:11.5px}
+.home-hero .eyebrow::before{display:none}
+@media (max-width:600px){.home-hero .eyebrow{letter-spacing:.05em;font-size:9.5px}}
+/* Hero text stays selectable/copyable. The synthetic pointer drive uses untrusted
+   events, which don't trigger native text selection, so there's no highlight-block issue. */
+.home-hero{-webkit-user-select:text;user-select:text}
+/* Heading: clean, tight, bold, centered (Fractal-style). */
+.home-hero h1{color:#111018;font-weight:700;font-size:clamp(31px,4.4vw,54px);line-height:1.16;letter-spacing:-.032em;text-wrap:balance}
 .home-hero h1 .hl{display:block}
-/* one accent moment: the headline stays white, only the serif word is orange */
-.home-hero h1 .si{color:var(--orange)}
-.home-hero .sub{font-size:20px;font-weight:600;color:#F4A468;margin:22px 0 14px;text-wrap:balance}
-.home-hero p.lead{font-size:17.5px;max-width:54ch;color:#C8C3E4}
-.home-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.home-hero .btn-ghost:hover{border-color:#fff}
-.hh-in{opacity:0;transform:translateY(18px);animation:hhin .85s cubic-bezier(.22,1,.36,1) forwards}
-.hh-in.d1{animation-delay:.06s}.hh-in.d2{animation-delay:.70s}.hh-in.d3{animation-delay:.82s}.hh-in.d4{animation-delay:.94s}
+/* Heading line sizes: first two lines large, third line smaller. */
+.home-hero h1 .hl:nth-child(1){font-size:1em}
+.home-hero h1 .hl:nth-child(2){font-size:1em;margin-top:.04em}
+.home-hero h1 .hl:nth-child(3){font-size:.64em;margin-top:.12em}
+/* Accent word matches the heading font (bold sans), just colored — like the reference. */
+.home-hero h1 .si{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:700;letter-spacing:-.035em;color:#F26522}
+/* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */
+.home-hero .sub{font-size:clamp(18px,2.1vw,23px);font-weight:600;color:#E8704E;margin:20px auto 0;text-wrap:pretty;max-width:40ch;line-height:1.4;letter-spacing:-.005em}
+.home-hero p.lead{font-size:15.5px;line-height:1.6;max-width:none;color:#7c788c;margin:16px auto 0;text-wrap:pretty}
+.home-hero .hero-ctas{margin-top:40px;gap:16px}
+.home-hero .hero-ctas .btn{padding:15px 30px;border-radius:14px;font-size:15px}
+.home-hero .btn-ghost{background:transparent;color:#221B4E;border-color:rgba(0,0,0,.28)}
+.home-hero .btn-ghost:hover{border-color:rgba(0,0,0,.6)}
+.hh-in{opacity:0;transform:translateY(14px);animation:hhin .5s cubic-bezier(.16,1,.3,1) forwards}
+.hh-in.d1{animation-delay:.04s}.hh-in.d2{animation-delay:.34s}.hh-in.d3{animation-delay:.42s}.hh-in.d4{animation-delay:.5s}
 @keyframes hhin{to{opacity:1;transform:none}}
 
-/* Heading reveals word-by-word with a soft blur (Aceternity-style) */
-.home-hero h1 .w{display:inline-block;opacity:0;filter:blur(4px);transform:translateY(10px);
-  animation:heroWord .45s ease-in-out forwards;animation-delay:calc(var(--wi,0) * .08s + .1s)}
+/* Word-by-word headline reveal: staggered rise + de-blur, ease-out. */
+.home-hero h1 .w{display:inline-block;opacity:0;filter:blur(5px);transform:translateY(20px);
+  animation:heroWord .62s cubic-bezier(.22,1,.36,1) forwards;animation-delay:calc(var(--wi,0) * .05s + .1s)}
 @keyframes heroWord{to{opacity:1;filter:blur(0);transform:none}}
 
 /* Isometric engine */
@@ -775,7 +794,8 @@ section>.wrap>.sec-intro{text-align:justify;margin-left:0;margin-right:auto}
 .ind-grid{justify-content:center}
 .ind-track{margin-left:auto;margin-right:auto}
 /* opt-outs: compositions that are deliberately asymmetric */
-.home-hero .eyebrow{text-align:left}
+.home-hero .eyebrow{text-align:center}
+.home-hero .hero-ctas{justify-content:center}
 .payoff-grid{text-align:left}
 .payoff-grid .eyebrow{text-align:left}
 .payoff-grid h2.sec{text-align:left;margin-left:0}

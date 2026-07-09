@@ -473,13 +473,13 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 /* Stepped lines: line 1 biggest → line 3 smallest (h1 → h2 → h3). */
 .home-hero h1 .hl{display:block}
 .home-hero h1 .hl:nth-child(1){font-size:1em}
-.home-hero h1 .hl:nth-child(2){font-size:.76em}
+.home-hero h1 .hl:nth-child(2){font-size:.85em}
 .home-hero h1 .hl:nth-child(3){font-size:.58em}
 /* Accent word matches the heading font (bold sans), just colored — like the reference. */
 .home-hero h1 .si{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.03em;color:#F26522}
 /* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */
 .home-hero .sub{font-size:clamp(17px,1.8vw,21px);font-weight:500;color:#5a5a64;margin:22px auto 0;text-wrap:balance;max-width:34ch;line-height:1.5}
-.home-hero p.lead{font-size:14.5px;line-height:1.6;max-width:60ch;color:#9a96a4;margin:18px auto 0;text-wrap:pretty}
+.home-hero p.lead{font-size:16.5px;line-height:1.6;max-width:62ch;color:#7c7888;margin:18px auto 0;text-wrap:pretty}
 .home-hero .hero-ctas{margin-top:40px;gap:16px}
 .home-hero .hero-ctas .btn{padding:15px 30px;border-radius:14px;font-size:15px}
 .home-hero .btn-ghost{background:transparent;color:#221B4E;border-color:rgba(0,0,0,.28)}

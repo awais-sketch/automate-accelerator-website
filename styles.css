@@ -451,7 +451,7 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 .home-hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
   background:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);background-size:30px 30px;
   -webkit-mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4));mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4))}
-.home-hero .wrap{position:relative;z-index:3;width:100%}
+.home-hero .wrap{position:relative;z-index:3;width:100%;max-width:1560px}
 /* Animated shader background (mounted by the module script in index.html).
    Fades in over the light #EFEFEF base; dark hero text sits on top (no scrim). */
 .home-hero .hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
@@ -460,7 +460,7 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 /* No scrim in the Axion look — dark text sits directly on the light shader. */
 .home-hero::after{content:none}
 .home-hero .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
-.home-hero .hero-grid > div{width:100%;max-width:1200px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.home-hero .hero-grid > div{width:100%;max-width:1440px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 /* Reference-style eyebrow: plain small coral label, no dash, centered. */
 .home-hero .eyebrow{color:#E8704E;margin-bottom:26px;text-align:center;letter-spacing:.22em;font-size:11.5px}
 .home-hero .eyebrow::before{display:none}
@@ -469,12 +469,13 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
    events, which don't trigger native text selection, so there's no highlight-block issue. */
 .home-hero{-webkit-user-select:text;user-select:text}
 /* Heading: medium weight, centered. */
-.home-hero h1{color:#0c0c14;font-weight:500;font-size:clamp(32px,5vw,80px);line-height:1.12;letter-spacing:-.03em}
-/* Stepped lines: line 1 biggest → line 3 smallest (h1 → h2 → h3). */
+/* Scales small→big across mobile→laptop→monitor (5vw, up to 100px). */
+.home-hero h1{color:#0c0c14;font-weight:500;font-size:clamp(26px,5vw,100px);line-height:1.08;letter-spacing:-.03em}
+/* Stepped lines with breathing room between them (h1 → h2 → h3). */
 .home-hero h1 .hl{display:block}
 .home-hero h1 .hl:nth-child(1){font-size:1em}
-.home-hero h1 .hl:nth-child(2){font-size:.92em}
-.home-hero h1 .hl:nth-child(3){font-size:.74em}
+.home-hero h1 .hl:nth-child(2){font-size:.92em;margin-top:.1em}
+.home-hero h1 .hl:nth-child(3){font-size:.74em;margin-top:.12em}
 /* Accent word matches the heading font (bold sans), just colored — like the reference. */
 .home-hero h1 .si{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.03em;color:#F26522}
 /* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */

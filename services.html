@@ -15,6 +15,10 @@
 <title>Services | The Growth Engine by Automate Accelerator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://esm.sh" crossorigin>
+<link rel="modulepreload" href="https://esm.sh/react@18.3.1" crossorigin>
+<link rel="modulepreload" href="https://esm.sh/react-dom@18.3.1/client" crossorigin>
+<link rel="modulepreload" href="https://esm.sh/shaders@2.5.135/react?deps=react@18.3.1,react-dom@18.3.1" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="motion.css">
@@ -66,6 +70,7 @@
 
 <!-- HERO -->
 <section class="page-hero svc-hero">
+  <div class="hero-shader" id="heroShader" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow">How we work · Growth Engine</span>
     <h1>Every qualified meeting starts with <span class="si">the right person.</span></h1>
@@ -352,6 +357,8 @@
   </div>
 </footer>
 
+<!-- Hero animated shader background (shared module) -->
+<script type="module" src="hero-shader.js"></script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="app.js" defer></script>
 <script src="motion-plus.js" defer></script>

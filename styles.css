@@ -450,10 +450,13 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 
 /* ===== Home hero v3: dark stage + animated isometric engine ===== */
 .home-hero{background:#EFEFEF;padding:80px 0;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
-/* Animated shader background (light Axion look), mounted by the module script in index.html. */
-.home-hero .hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
-.home-hero .hero-shader.is-ready{opacity:.55}
-.home-hero .hero-shader canvas{position:absolute;inset:0;display:block;width:100%!important;height:100%!important}
+/* Animated shader background (mounted by hero-shader.js into #heroShader).
+   Generic so any hero — home or page hero — can use it. */
+.hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
+.hero-shader.is-ready{opacity:.55}
+.hero-shader canvas{position:absolute;inset:0;display:block;width:100%!important;height:100%!important}
+/* Keep page-hero content above the shader. */
+.page-hero .wrap{position:relative;z-index:2}
 .home-hero .wrap{position:relative;z-index:2;width:100%;max-width:min(92vw,1800px)}
 .home-hero .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
 .home-hero .eyebrow{color:#D96410}

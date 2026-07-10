@@ -759,14 +759,14 @@ p{text-wrap:pretty}
    ============================================================ */
 .page-hero .wrap,.cs-hero .wrap{text-align:center}
 .page-hero h1,.cs-hero h1{margin-left:auto;margin-right:auto}
-.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto;text-wrap:pretty;text-align:justify}
+.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto;text-wrap:pretty;text-align:center}
 .page-hero .hero-ctas,.cs-hero .hero-ctas{justify-content:center}
 .eyebrow,.chapter{text-align:center}
 /* section headers sit on the content-left edge so the eyebrow, heading and
    intro share one left edge and line up with the cards/rows beneath them */
 h2.sec{text-align:left;margin-left:0;margin-right:auto}
 section>.wrap>.eyebrow{text-align:left;margin-left:0;margin-right:auto}
-section>.wrap>.sec-intro{text-align:justify;margin-left:0;margin-right:auto}
+section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
 /* centred compositions (page/case heroes, industries marquee) opt back in */
 .page-hero h2.sec,.cs-hero h2.sec,.industries h2.sec{text-align:center;margin-left:auto}
 .page-hero>.wrap>.eyebrow,.cs-hero>.wrap>.eyebrow,.industries>.wrap>.eyebrow{text-align:center;margin-left:auto}

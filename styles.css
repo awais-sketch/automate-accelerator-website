@@ -451,11 +451,11 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 .home-hero .hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
 .home-hero .hero-shader.is-ready{opacity:1}
 .home-hero .hero-shader canvas{position:absolute;inset:0;display:block;width:100%!important;height:100%!important}
-.home-hero .wrap{position:relative;z-index:2;width:100%}
+.home-hero .wrap{position:relative;z-index:2;width:100%;max-width:min(92vw,1800px)}
 .home-hero .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
 .home-hero .eyebrow{color:#D96410}
 .home-hero .eyebrow::before{background:var(--orange)}
-.home-hero h1{color:#141019;font-size:clamp(33px,3.4vw,47px)}
+.home-hero h1{color:#141019;font-size:clamp(33px,3.6vw,68px)}
 .home-hero h1 .hl{display:block}
 /* one accent moment: the headline stays white, only the serif word is orange */
 .home-hero h1 .si{color:var(--orange)}
@@ -474,19 +474,22 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 
 /* Isometric engine */
 .iso{position:relative;height:470px;perspective:1400px}
+/* Scale the engine up on large monitors so it doesn't look small. */
+@media (min-width:1600px){.home-hero .iso{transform:scale(1.2);transform-origin:center}}
+@media (min-width:2200px){.home-hero .iso{transform:scale(1.35)}}
 .iso-plane{position:absolute;left:50%;top:50%;width:410px;height:410px;margin:-205px 0 0 -205px;transform:rotateX(57deg) rotateZ(-45deg);transform-style:preserve-3d;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:16px;padding:18px;border-radius:26px;background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.5);box-shadow:0 40px 90px -55px rgba(90,68,188,.35)}
 .iso-plane::after{content:"";position:absolute;inset:34%;background:radial-gradient(circle, rgba(244,121,32,.28), transparent 70%);filter:blur(18px);transform:translateZ(2px);animation:corePulse 4s ease-in-out infinite}
 @keyframes corePulse{0%,100%{opacity:.55}50%{opacity:1}}
 .tile{border-radius:13px;position:relative;transform:translateZ(var(--z,22px));animation:tfloat 6.5s ease-in-out infinite;animation-delay:var(--d,0s);box-shadow:-10px 14px 24px rgba(60,45,100,.2)}
 @keyframes tfloat{0%,100%{transform:translateZ(var(--z,22px))}50%{transform:translateZ(calc(var(--z,22px) + 16px))}}
-.tile.ch{background:linear-gradient(135deg,#F98A38 0%,#E86A15 55%,#C85A0E 100%);border:1px solid rgba(255,255,255,.25)}
-.tile.core{background:linear-gradient(135deg,#5A44BC 0%,#412F8F 100%);border:1px solid rgba(255,255,255,.3);--z:44px}
+.tile.ch{background:linear-gradient(135deg,#FFB477 0%,#F9923F 55%,#EE7C22 100%);border:1px solid rgba(255,255,255,.45)}
+.tile.core{background:linear-gradient(135deg,#8471E0 0%,#5F4BC4 100%);border:1px solid rgba(255,255,255,.45);--z:44px}
 .tile.ghost{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);--z:8px;animation:none;box-shadow:none}
 .tile span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:13.5px;text-align:center;padding:6px;letter-spacing:-.01em}
 .tile.core span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
 
 /* HUD chips floating over the scene */
-.hud{position:absolute;background:rgba(23,18,51,.78);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 18px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);z-index:3}
+.hud{position:absolute;background:rgba(52,42,102,.72);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:13px 18px;box-shadow:0 20px 40px -22px rgba(60,45,100,.4);z-index:3}
 .hud b{display:block;color:#fff;font-size:19px;font-weight:800;letter-spacing:-.01em}
 .hud span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#B9B3D9}
 .hud.hud-count{left:-6px;bottom:34px;border-left:3px solid var(--orange);animation:hudBob 7s ease-in-out infinite}

@@ -18,13 +18,13 @@
 /* ground shadow: anchors the floating plane so it reads as an object, not a sticker */
 .home-hero .iso::before{content:"";position:absolute;left:50%;top:62%;width:68%;height:160px;
   transform:translateX(-50%);pointer-events:none;
-  background:radial-gradient(50% 50% at 50% 50%, rgba(8,5,24,.55), transparent 68%);filter:blur(18px)}
+  background:radial-gradient(50% 50% at 50% 50%, rgba(80,60,130,.22), transparent 68%);filter:blur(18px)}
 
 .home-hero .tile{
   border-radius:18px;
-  box-shadow:0 30px 52px -26px rgba(0,0,0,.62),
-    inset 0 1px 0 rgba(255,255,255,.30),
-    inset 0 -10px 22px rgba(0,0,0,.16);
+  box-shadow:0 24px 44px -26px rgba(70,52,120,.34),
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 -10px 22px rgba(120,70,20,.08);
   animation:efloat 8.5s ease-in-out infinite;
 }
 /* calmer float than the site-wide tfloat: half the travel, longer period */
@@ -32,16 +32,16 @@
 /* channels one step muted so the core and the active pulse carry the light —
    and the CTA keeps sole ownership of saturated orange on the left */
 .home-hero .tile.ch{
-  background:linear-gradient(155deg,#DE8845 0%,#BC5F16 52%,#8C450D 100%);
-  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(155deg,#FFB878 0%,#F58A34 52%,#E0701A 100%);
+  border:1px solid rgba(255,255,255,.42);
 }
 /* the core is the protagonist: brighter material, stronger glow, slightly larger */
 .home-hero .tile.core{
-  background:linear-gradient(155deg,#8B79E8 0%,#5A44BC 55%,#3B2D8F 100%);
-  border:1px solid rgba(255,255,255,.42);
-  box-shadow:0 34px 64px -20px rgba(122,103,224,.85),
-    inset 0 1px 0 rgba(255,255,255,.40),
-    inset 0 -10px 22px rgba(0,0,0,.20);
+  background:linear-gradient(155deg,#A395F2 0%,#7A66DC 55%,#5A44BC 100%);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 28px 56px -22px rgba(122,103,224,.55),
+    inset 0 1px 0 rgba(255,255,255,.50),
+    inset 0 -10px 22px rgba(60,45,100,.12);
   animation-name:ecoreFloat;
 }
 @keyframes ecoreFloat{0%,100%{transform:translateZ(var(--z,44px)) scale(1.07)}
@@ -78,7 +78,7 @@
 @keyframes wv{0%,100%{height:3px}50%{height:11px}}
 
 /* chips clear of the diamond */
-.home-hero .hud{border-radius:14px;background:rgba(20,15,46,.82);
+.home-hero .hud{border-radius:14px;background:rgba(62,50,116,.74);
   border:1px solid rgba(255,255,255,.14);
   box-shadow:0 24px 50px -20px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.10)}
 .home-hero .hud.hud-meet{top:2px;right:0}

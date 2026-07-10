@@ -468,19 +468,16 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 /* Hero text stays selectable/copyable. The synthetic pointer drive uses untrusted
    events, which don't trigger native text selection, so there's no highlight-block issue. */
 .home-hero{-webkit-user-select:text;user-select:text}
-/* Heading: medium weight, centered. */
-/* Scales small→big across mobile→laptop→monitor (5vw, up to 100px). */
-.home-hero h1{color:#0c0c14;font-weight:500;font-size:clamp(26px,5.4vw,116px);line-height:1.08;letter-spacing:-.03em}
-/* Stepped lines with breathing room between them (h1 → h2 → h3). */
+/* Heading: confident semibold, clean uniform lines. Scales mobile→monitor. */
+.home-hero h1{color:#141019;font-weight:600;font-size:clamp(30px,4.8vw,92px);line-height:1.05;letter-spacing:-.035em}
 .home-hero h1 .hl{display:block}
-.home-hero h1 .hl:nth-child(1){font-size:1em}
-.home-hero h1 .hl:nth-child(2){font-size:.86em;margin-top:.1em}
-.home-hero h1 .hl:nth-child(3){font-size:.72em;margin-top:.12em}
-/* Accent word matches the heading font (bold sans), just colored — like the reference. */
-.home-hero h1 .si{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.03em;color:#F26522}
+.home-hero h1 .hl:nth-child(2){margin-top:.04em}
+.home-hero h1 .hl:nth-child(3){margin-top:.04em}
+/* Signature detail: accent word in Instrument Serif italic — editorial serif/sans contrast. */
+.home-hero h1 .si{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.06em;letter-spacing:0;color:#F47920}
 /* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */
 .home-hero .sub{font-size:clamp(17px,1.8vw,21px);font-weight:500;color:#5a5a64;margin:22px auto 0;text-wrap:balance;max-width:34ch;line-height:1.5}
-.home-hero p.lead{font-size:16.5px;line-height:1.6;max-width:none;color:#7c7888;margin:18px auto 0;text-wrap:pretty}
+.home-hero p.lead{font-size:16.5px;line-height:1.65;max-width:60ch;color:#6c6878;margin:22px auto 0;text-wrap:pretty}
 .home-hero .hero-ctas{margin-top:40px;gap:16px}
 .home-hero .hero-ctas .btn{padding:15px 30px;border-radius:14px;font-size:15px}
 .home-hero .btn-ghost{background:transparent;color:#221B4E;border-color:rgba(0,0,0,.28)}

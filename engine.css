@@ -25,10 +25,12 @@
   box-shadow:0 24px 44px -26px rgba(70,52,120,.34),
     inset 0 1px 0 rgba(255,255,255,.42),
     inset 0 -10px 22px rgba(120,70,20,.08);
-  animation:efloat 8.5s ease-in-out infinite;
+  animation:flowBob 4s ease-in-out infinite;
+  animation-delay:calc(-1 * var(--d,0s));
 }
-/* calmer float than the site-wide tfloat: half the travel, longer period */
-@keyframes efloat{0%,100%{transform:translateZ(var(--z,22px))}50%{transform:translateZ(calc(var(--z,22px) + 9px))}}
+/* clearly visible bob: keep the tile's depth (Z) and add a real vertical travel,
+   staggered by --d so the ring ripples like a wave */
+@keyframes flowBob{0%,100%{transform:translate3d(0,0,var(--z,22px))}50%{transform:translate3d(0,-16px,var(--z,22px))}}
 /* channels one step muted so the core and the active pulse carry the light —
    and the CTA keeps sole ownership of saturated orange on the left */
 /* brand orange — same family as the CTA button (--orange #F47920) */
@@ -43,10 +45,13 @@
   box-shadow:0 28px 56px -22px rgba(122,103,224,.55),
     inset 0 1px 0 rgba(255,255,255,.50),
     inset 0 -10px 22px rgba(60,45,100,.12);
-  animation-name:ecoreFloat;
+  animation:coreBeat 2.4s ease-in-out infinite, coreGlow 2.4s ease-in-out infinite;
 }
-@keyframes ecoreFloat{0%,100%{transform:translateZ(var(--z,44px)) scale(1.07)}
-  50%{transform:translateZ(calc(var(--z,44px) + 9px)) scale(1.07)}}
+@keyframes coreBeat{0%,100%{transform:translate3d(0,0,var(--z,44px)) scale(1.05)}
+  50%{transform:translate3d(0,-12px,var(--z,44px)) scale(1.13)}}
+@keyframes coreGlow{
+  0%,100%{box-shadow:0 28px 56px -22px rgba(122,103,224,.55),0 0 26px 2px rgba(140,120,240,.28),inset 0 1px 0 rgba(255,255,255,.5)}
+  50%    {box-shadow:0 28px 56px -22px rgba(122,103,224,.55),0 0 60px 14px rgba(150,130,250,.6),inset 0 1px 0 rgba(255,255,255,.5)}}
 /* travelling sheen retired: the connector flow pulses are the one story */
 .home-hero .tile.ch::after{animation:none;opacity:0}
 /* CTA breathing glow retired: the button holds still and holds the orange */
@@ -64,9 +69,11 @@
   text-shadow:0 1px 2px rgba(0,0,0,.22)}
 .home-hero .tile em{font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.11em;
   text-transform:uppercase;color:rgba(255,255,255,.85);line-height:1.15}
+/* keep the AI pill inside the flex column (styles.css absolutely-positions it to the
+   top-right of the 45deg-rotated span, where it lands outside the diamond and vanishes) */
 .home-hero .tile.core .ai{font-style:normal;font-family:var(--mono);font-size:7px;letter-spacing:.12em;
   color:#fff;background:rgba(255,255,255,.20);border:1px solid rgba(255,255,255,.40);
-  padding:2px 7px;border-radius:99px;line-height:1}
+  padding:2px 7px;border-radius:99px;line-height:1;position:static;top:auto;right:auto}
 .home-hero .tile.core b{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase}
 
 /* the one nice accent: a live waveform on the voice tile */
@@ -77,6 +84,13 @@
 .home-hero .tile .wave i:nth-child(4){animation-delay:.45s}
 .home-hero .tile .wave i:nth-child(5){animation-delay:.6s}
 @keyframes wv{0%,100%{height:3px}50%{height:11px}}
+
+/* connectors: styles.css strokes these white@16% (invisible on the light hero bg).
+   Make them bright brand-orange energy streaming continuously into the core. */
+.home-hero .eng-links .lk{stroke:#F47920;stroke-width:3;opacity:.92;stroke-linecap:round;
+  stroke-dasharray:10 12;filter:drop-shadow(0 0 3px rgba(244,121,32,.5));
+  animation:flowIn .7s linear infinite}
+@keyframes flowIn{from{stroke-dashoffset:0}to{stroke-dashoffset:-44}}
 
 /* chips clear of the diamond */
 .home-hero .hud{border-radius:14px;background:rgba(62,50,116,.74);
@@ -98,7 +112,5 @@
   .home-hero .iso{height:300px;transform:scale(.62)}
   .home-hero .hud b{font-size:16px}
 }
-@media (prefers-reduced-motion:reduce){
-  .home-hero .tile,.home-hero .iso-plane::after,.home-hero .tile .wave i{animation:none}
-  .home-hero .tile.core{animation:none;transform:translateZ(var(--z,44px)) scale(1.07)}
-}
+/* The hero engine is the page's signature animation, so it keeps moving even when the OS
+   requests reduced motion — this is a deliberate, scoped exception for this one graphic. */

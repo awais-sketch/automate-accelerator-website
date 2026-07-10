@@ -31,9 +31,10 @@
 @keyframes efloat{0%,100%{transform:translateZ(var(--z,22px))}50%{transform:translateZ(calc(var(--z,22px) + 9px))}}
 /* channels one step muted so the core and the active pulse carry the light —
    and the CTA keeps sole ownership of saturated orange on the left */
+/* brand orange — same family as the CTA button (--orange #F47920) */
 .home-hero .tile.ch{
-  background:linear-gradient(155deg,#FFB878 0%,#F58A34 52%,#E0701A 100%);
-  border:1px solid rgba(255,255,255,.42);
+  background:linear-gradient(155deg,#FBA254 0%,#F47920 58%,#F07A22 100%);
+  border:1px solid rgba(255,255,255,.5);
 }
 /* the core is the protagonist: brighter material, stronger glow, slightly larger */
 .home-hero .tile.core{

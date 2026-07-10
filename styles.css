@@ -446,51 +446,68 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 }
 
 /* ===== Home hero v3: dark stage + animated isometric engine ===== */
-/* Axion hero (exact spec): light gray base with the animated shader overlay on top. */
-.home-hero{background:#EFEFEF;padding:0;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-.home-hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);background-size:30px 30px;
-  -webkit-mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4));mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4))}
-.home-hero .wrap{position:relative;z-index:3;width:100%;max-width:1680px}
-/* Animated shader background (mounted by the module script in index.html).
-   Fades in over the light #EFEFEF base; dark hero text sits on top (no scrim). */
+.home-hero{background:#EFEFEF;padding:96px 0 88px;position:relative;overflow:hidden}
+/* Animated shader background (light Axion look), mounted by the module script in index.html. */
 .home-hero .hero-shader{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
 .home-hero .hero-shader.is-ready{opacity:1}
 .home-hero .hero-shader canvas{position:absolute;inset:0;display:block;width:100%!important;height:100%!important}
-/* No scrim in the Axion look — dark text sits directly on the light shader. */
-.home-hero::after{content:none}
-.home-hero .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
-.home-hero .hero-grid > div{width:100%;max-width:1560px;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
-/* Reference-style eyebrow: plain small coral label, no dash, centered. */
-.home-hero .eyebrow{color:#E8704E;margin-bottom:26px;text-align:center;letter-spacing:.22em;font-size:11.5px}
-.home-hero .eyebrow::before{display:none}
-@media (max-width:600px){.home-hero .eyebrow{letter-spacing:.05em;font-size:9.5px}}
-/* Hero text stays selectable/copyable. The synthetic pointer drive uses untrusted
-   events, which don't trigger native text selection, so there's no highlight-block issue. */
-.home-hero{-webkit-user-select:text;user-select:text}
-/* Heading: confident semibold, clean uniform lines. Scales mobile→monitor. */
-.home-hero h1{color:#141019;font-weight:600;font-size:clamp(30px,4.8vw,92px);line-height:1.05;letter-spacing:-.035em}
+.home-hero .wrap{position:relative;z-index:2}
+.home-hero .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+.home-hero .eyebrow{color:#D96410}
+.home-hero .eyebrow::before{background:var(--orange)}
+.home-hero h1{color:#141019;font-size:clamp(33px,3.4vw,47px)}
 .home-hero h1 .hl{display:block}
-.home-hero h1 .hl:nth-child(2){margin-top:.04em}
-.home-hero h1 .hl:nth-child(3){margin-top:.04em}
-/* Signature detail: accent word in Instrument Serif italic — editorial serif/sans contrast. */
-.home-hero h1 .si{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.06em;letter-spacing:0;color:#F47920}
-/* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */
-.home-hero .sub{font-size:clamp(17px,1.8vw,21px);font-weight:500;color:#5a5a64;margin:22px auto 0;text-wrap:balance;max-width:34ch;line-height:1.5}
-.home-hero p.lead{font-size:16.5px;line-height:1.65;max-width:60ch;color:#6c6878;margin:22px auto 0;text-wrap:pretty}
-.home-hero .hero-ctas{margin-top:40px;gap:16px}
-.home-hero .hero-ctas .btn{padding:15px 30px;border-radius:14px;font-size:15px}
+/* one accent moment: the headline stays white, only the serif word is orange */
+.home-hero h1 .si{color:var(--orange)}
+.home-hero .sub{font-size:20px;font-weight:600;color:#D96410;margin:22px 0 14px;text-wrap:balance}
+.home-hero p.lead{font-size:17.5px;max-width:54ch;color:#55516a}
 .home-hero .btn-ghost{background:transparent;color:#221B4E;border-color:rgba(0,0,0,.28)}
 .home-hero .btn-ghost:hover{border-color:rgba(0,0,0,.6)}
-.hh-in{opacity:0;transform:translateY(14px);animation:hhin .5s cubic-bezier(.16,1,.3,1) forwards}
-.hh-in.d1{animation-delay:.04s}.hh-in.d2{animation-delay:.34s}.hh-in.d3{animation-delay:.42s}.hh-in.d4{animation-delay:.5s}
+.hh-in{opacity:0;transform:translateY(18px);animation:hhin .85s cubic-bezier(.22,1,.36,1) forwards}
+.hh-in.d1{animation-delay:.06s}.hh-in.d2{animation-delay:.70s}.hh-in.d3{animation-delay:.82s}.hh-in.d4{animation-delay:.94s}
 @keyframes hhin{to{opacity:1;transform:none}}
 
-/* Word-by-word headline reveal: staggered rise + de-blur, ease-out. */
-.home-hero h1 .w{display:inline-block;opacity:0;filter:blur(5px);transform:translateY(20px);
-  animation:heroWord .62s cubic-bezier(.22,1,.36,1) forwards;animation-delay:calc(var(--wi,0) * .05s + .1s)}
+/* Heading reveals word-by-word with a soft blur (Aceternity-style) */
+.home-hero h1 .w{display:inline-block;opacity:0;filter:blur(4px);transform:translateY(10px);
+  animation:heroWord .45s ease-in-out forwards;animation-delay:calc(var(--wi,0) * .08s + .1s)}
 @keyframes heroWord{to{opacity:1;filter:blur(0);transform:none}}
 
+/* Isometric engine */
+.iso{position:relative;height:470px;perspective:1400px}
+.iso-plane{position:absolute;left:50%;top:50%;width:410px;height:410px;margin:-205px 0 0 -205px;transform:rotateX(57deg) rotateZ(-45deg);transform-style:preserve-3d;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:16px;padding:18px;border-radius:26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);box-shadow:0 60px 120px -50px rgba(0,0,0,.6)}
+.iso-plane::after{content:"";position:absolute;inset:34%;background:radial-gradient(circle, rgba(244,121,32,.28), transparent 70%);filter:blur(18px);transform:translateZ(2px);animation:corePulse 4s ease-in-out infinite}
+@keyframes corePulse{0%,100%{opacity:.55}50%{opacity:1}}
+.tile{border-radius:13px;position:relative;transform:translateZ(var(--z,22px));animation:tfloat 6.5s ease-in-out infinite;animation-delay:var(--d,0s);box-shadow:-16px 18px 28px rgba(0,0,0,.38)}
+@keyframes tfloat{0%,100%{transform:translateZ(var(--z,22px))}50%{transform:translateZ(calc(var(--z,22px) + 16px))}}
+.tile.ch{background:linear-gradient(135deg,#F98A38 0%,#E86A15 55%,#C85A0E 100%);border:1px solid rgba(255,255,255,.25)}
+.tile.core{background:linear-gradient(135deg,#5A44BC 0%,#412F8F 100%);border:1px solid rgba(255,255,255,.3);--z:44px}
+.tile.ghost{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);--z:8px;animation:none;box-shadow:none}
+.tile span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:13.5px;text-align:center;padding:6px;letter-spacing:-.01em}
+.tile.core span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+
+/* HUD chips floating over the scene */
+.hud{position:absolute;background:rgba(23,18,51,.78);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 18px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);z-index:3}
+.hud b{display:block;color:#fff;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.hud span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#B9B3D9}
+.hud.hud-count{left:-6px;bottom:34px;border-left:3px solid var(--orange);animation:hudBob 7s ease-in-out infinite}
+.hud.hud-meet{right:-2px;top:26px;display:flex;gap:10px;align-items:center;opacity:0;animation:hudPop .6s ease 1.3s forwards, hudBob 7s ease-in-out 2s infinite}
+.hud.hud-meet .tick{width:30px;height:30px;border-radius:99px;background:linear-gradient(135deg,#F98A38,#D96410);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;flex:none}
+.hud.hud-meet b{font-size:14.5px}
+@keyframes hudPop{from{opacity:0;transform:translateY(10px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes hudBob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+
+@media (max-width:960px){
+  .home-hero .hero-grid{grid-template-columns:1fr;gap:36px}
+  .iso{height:390px;transform:scale(.82);transform-origin:top center}
+}
+@media (max-width:560px){
+  .iso{transform:scale(.66);height:330px}
+  .hud.hud-count{left:0}.hud.hud-meet{right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .tile,.iso-plane::after,.hud.hud-count{animation:none}
+  .hud.hud-meet{animation:none;opacity:1}
+}
 
 /* ===== Home rebuild additions (doc copy) ===== */
 /* hero tagline */
@@ -756,8 +773,7 @@ section>.wrap>.sec-intro{text-align:justify;margin-left:0;margin-right:auto}
 .ind-grid{justify-content:center}
 .ind-track{margin-left:auto;margin-right:auto}
 /* opt-outs: compositions that are deliberately asymmetric */
-.home-hero .eyebrow{text-align:center}
-.home-hero .hero-ctas{justify-content:center}
+.home-hero .eyebrow{text-align:left}
 .payoff-grid{text-align:left}
 .payoff-grid .eyebrow{text-align:left}
 .payoff-grid h2.sec{text-align:left;margin-left:0}

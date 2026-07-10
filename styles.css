@@ -474,8 +474,8 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 /* Stepped lines with breathing room between them (h1 → h2 → h3). */
 .home-hero h1 .hl{display:block}
 .home-hero h1 .hl:nth-child(1){font-size:1em}
-.home-hero h1 .hl:nth-child(2){font-size:.78em;margin-top:.1em}
-.home-hero h1 .hl:nth-child(3){font-size:.6em;margin-top:.12em}
+.home-hero h1 .hl:nth-child(2){font-size:.86em;margin-top:.1em}
+.home-hero h1 .hl:nth-child(3){font-size:.72em;margin-top:.12em}
 /* Accent word matches the heading font (bold sans), just colored — like the reference. */
 .home-hero h1 .si{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.03em;color:#F26522}
 /* Hierarchy: h1 heading (largest) → subheading (medium gray) → paragraph (smaller, lighter). */

@@ -99,7 +99,9 @@ header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:bl
 .card .k{width:34px;height:4px;border-radius:2px;background:var(--orange);margin-bottom:18px}
 .problem{background:var(--mist)}
 h2.sec{font-size:clamp(28px,3.4vw,40px);max-width:30ch;text-wrap:balance}
-.sec-intro{font-size:19px;max-width:66ch;margin-top:16px;text-wrap:pretty}
+/* Section intros read like a written aside: elegant italic serif, never justified. */
+.sec-intro{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;
+  font-size:clamp(20px,1.5vw,24px);line-height:1.6;letter-spacing:0;max-width:62ch;margin-top:18px;text-wrap:pretty}
 
 /* Two paths */
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}

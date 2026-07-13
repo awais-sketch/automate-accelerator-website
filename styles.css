@@ -821,8 +821,9 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
   .svc-page section>.wrap>.sec-intro,.svc-page .page-hero p.lead{max-width:88vw}
   .svc-page .brk{display:none}
 }
-.svc-page .svc-sub-h{display:block;text-align:center}
-.svc-page .chapter{margin-bottom:20px}     /* lift the 01/02 label off the heading */
+/* header rhythm: clear air between the 01 chapter, the sub-heading and the heading */
+.svc-page .chapter{margin-bottom:26px}
+.svc-page .svc-sub-h{display:block;text-align:center;margin-bottom:18px;letter-spacing:.16em}
 .svc-page section{padding:112px 0}          /* more air between the numbered sections */
 @media (max-width:640px){ .svc-page section{padding:72px 0} }
 /* keep every centred block tapered: no line wider than the first */

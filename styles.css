@@ -869,3 +869,15 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
    more ink than thin wordmarks, so they get lower height caps */
 .logo-item img.lg-sm{max-height:34px}
 .logo-item img.lg-xs{max-height:26px}
+
+/* ============================================================
+   Interactive 3D tilt for the big service cards (card-tilt.js).
+   JS drives the transform, so kill the transform transition and
+   let it manage a cursor-tracking glare + lifted shadow.
+   ============================================================ */
+.svc-block.tilt-on{transition:box-shadow .3s ease}
+.svc-block .tilt-glare{position:absolute;inset:0;border-radius:16px;pointer-events:none;z-index:6;
+  opacity:0;transition:opacity .3s ease;mix-blend-mode:soft-light;
+  background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.6), transparent 62%)}
+.svc-block.lit .tilt-glare{opacity:1}
+@media (prefers-reduced-motion:reduce){ .svc-block.tilt-on{transform:none!important} .svc-block .tilt-glare{display:none} }

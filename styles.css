@@ -785,7 +785,7 @@ p{text-wrap:pretty}
    ============================================================ */
 .page-hero .wrap,.cs-hero .wrap{text-align:center}
 .page-hero h1,.cs-hero h1{margin-left:auto;margin-right:auto}
-.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto;text-wrap:pretty;text-align:justify;text-align-last:center}
+.page-hero p.lead,.cs-hero p.lead{margin-left:auto;margin-right:auto;text-wrap:pretty;text-align:center}
 .page-hero .hero-ctas,.cs-hero .hero-ctas{justify-content:center}
 .eyebrow,.chapter{text-align:center}
 /* section headers sit on the content-left edge so the eyebrow, heading and
@@ -796,7 +796,7 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
 /* centred compositions (page/case heroes, industries marquee) opt back in */
 .page-hero h2.sec,.cs-hero h2.sec,.industries h2.sec{text-align:center;margin-left:auto}
 .page-hero>.wrap>.eyebrow,.cs-hero>.wrap>.eyebrow,.industries>.wrap>.eyebrow{text-align:center;margin-left:auto}
-.industries>.wrap>.sec-intro{text-align:justify;text-align-last:center;margin-left:auto;margin-right:auto}
+.industries>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto}
 .quote-pull{margin-left:auto;margin-right:auto}
 .industries .wrap{text-align:center}
 .ind-grid{justify-content:center}
@@ -813,7 +813,7 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
    Scoped to body.svc-page so other pages keep their left-aligned headers.
    ============================================================ */
 .svc-page section>.wrap>h2.sec{text-align:center;margin-left:auto;margin-right:auto}
-.svc-page section>.wrap>.sec-intro{text-align:justify;text-align-last:center;margin-left:auto;margin-right:auto;max-width:60ch}
+.svc-page section>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto;max-width:60ch}
 .svc-page .svc-sub-h{display:block;text-align:center}
 .svc-page .chapter{margin-bottom:20px}     /* lift the 01/02 label off the heading */
 .svc-page section{padding:112px 0}          /* more air between the numbered sections */

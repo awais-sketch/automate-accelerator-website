@@ -812,11 +812,16 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
    Scoped to body.svc-page so other pages keep their left-aligned headers.
    ============================================================ */
 .svc-page section>.wrap>h2.sec{text-align:center;margin-left:auto;margin-right:auto}
-.svc-page section>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto;max-width:70ch}
+.svc-page section>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto;max-width:64ch;text-wrap:balance}
 .svc-page .svc-sub-h{display:block;text-align:center}
 .svc-page .chapter{margin-bottom:20px}     /* lift the 01/02 label off the heading */
 .svc-page section{padding:112px 0}          /* more air between the numbered sections */
 @media (max-width:640px){ .svc-page section{padding:72px 0} }
+/* keep every centred block tapered: no line wider than the first */
+.svc-page .page-hero h1{text-wrap:balance}
+.svc-page .page-hero p.lead{text-wrap:balance}
+/* metric captions were cramped to 20ch (3 uneven lines) -> tidy 2-line captions */
+.svc-page .metrics .metric>span{max-width:26ch}
 
 /* Services channels: editorial ghost numerals (01–05) index the five
    channel blocks and break the long single-column rhythm */

@@ -214,7 +214,7 @@ footer a:hover{color:#fff}
 .page-hero h1{font-size:clamp(37px,4.7vw,58px);max-width:26ch}
 .page-hero p.lead{font-size:17.5px;max-width:48ch;margin-top:18px}
 /* services hero only: keep the subheading narrower than the heading */
-.page-hero.svc-hero p.lead{max-width:40ch}
+.page-hero.svc-hero p.lead{max-width:62ch}   /* widen: 6 lines -> ~4 lines */
 .page-hero .hero-ctas{margin-top:30px}
 .chapter{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);font-weight:500;display:block;margin-bottom:14px}
 .quote-pull{border-left:4px solid var(--orange);background:var(--mist);border-radius:0 12px 12px 0;padding:20px 26px;font-weight:600;color:var(--ink);font-size:16.5px;margin-top:30px;max-width:70ch}
@@ -806,6 +806,17 @@ section>.wrap>.sec-intro{text-align:left;margin-left:0;margin-right:auto}
 .payoff-grid .eyebrow{text-align:left}
 .payoff-grid h2.sec{text-align:left;margin-left:0}
 .feat-head .eyebrow{text-align:left}
+
+/* ============================================================
+   Services page: centred section headers + roomier vertical rhythm.
+   Scoped to body.svc-page so other pages keep their left-aligned headers.
+   ============================================================ */
+.svc-page section>.wrap>h2.sec{text-align:center;margin-left:auto;margin-right:auto}
+.svc-page section>.wrap>.sec-intro{text-align:center;margin-left:auto;margin-right:auto;max-width:70ch}
+.svc-page .svc-sub-h{display:block;text-align:center}
+.svc-page .chapter{margin-bottom:20px}     /* lift the 01/02 label off the heading */
+.svc-page section{padding:112px 0}          /* more air between the numbered sections */
+@media (max-width:640px){ .svc-page section{padding:72px 0} }
 
 /* Services channels: editorial ghost numerals (01–05) index the five
    channel blocks and break the long single-column rhythm */

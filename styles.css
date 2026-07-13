@@ -557,16 +557,13 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 .tcard p{position:relative;z-index:1;margin:0 0 auto;max-width:62ch;
   font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-style:normal;font-weight:500;
   font-size:clamp(18px,1.7vw,21px);color:var(--ink);line-height:1.62;letter-spacing:-.01em;text-wrap:pretty}
-/* attribution row: avatar · name/role · company mark */
-.tfoot{display:flex;align-items:center;gap:15px;margin-top:30px;padding-top:24px;border-top:1px solid #F0EEF7}
-.tavatar{flex:none;width:50px;height:50px;border-radius:99px;display:grid;place-items:center;
-  font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:800;font-size:15.5px;color:#fff;letter-spacing:.01em;
-  background:linear-gradient(140deg,#8471E0 0%,#5F4BC4 100%);box-shadow:0 10px 20px -10px rgba(95,75,196,.7)}
+/* attribution row: name/role · company logo */
+.tfoot{display:flex;align-items:center;gap:18px;margin-top:30px;padding-top:24px;border-top:1px solid #F0EEF7}
 .twho{display:flex;flex-direction:column;gap:3px;min-width:0}
 .twho b{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);font-weight:800;font-size:16px;letter-spacing:-.01em}
 .twho span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#8A85A6;line-height:1.5}
-.tcard .t-logo{margin-left:auto;height:30px;max-width:132px;object-fit:contain;flex:none}
-.t-mono{margin-left:auto;flex:none;height:46px;min-width:46px;padding:0 14px;border-radius:13px;display:grid;place-items:center;
+.tcard .t-logo{margin-left:auto;height:36px;max-width:158px;object-fit:contain;object-position:right center;flex:none}
+.t-mono{margin-left:auto;flex:none;height:46px;min-width:46px;padding:0 15px;border-radius:13px;display:grid;place-items:center;
   font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:.06em;color:var(--purple);
   background:linear-gradient(145deg,#F5F3FC,#ECE8F8);border:1px solid #E4DFF3}
 .tnav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
@@ -581,8 +578,6 @@ footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(-
 @media (max-width:640px){
   .tcard{padding:30px 22px 26px;min-height:0}
   .tcard::before{font-size:96px;right:16px}
-  .tfoot{flex-wrap:wrap;gap:12px}
-  .tcard .t-logo,.t-mono{margin-left:65px}
 }
 
 /* ===== Engine animation boost: AI core, Voice AI, data flow ===== */

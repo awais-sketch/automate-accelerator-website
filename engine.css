@@ -25,7 +25,7 @@
   box-shadow:0 24px 44px -26px rgba(70,52,120,.34),
     inset 0 1px 0 rgba(255,255,255,.42),
     inset 0 -10px 22px rgba(120,70,20,.08);
-  animation:flowBob 4s ease-in-out infinite;
+  animation:flowBob 5.6s ease-in-out infinite;
   animation-delay:calc(-1 * var(--d,0s));
 }
 /* clearly visible bob: keep the tile's depth (Z) and add a real vertical travel,
@@ -45,7 +45,7 @@
   box-shadow:0 28px 56px -22px rgba(122,103,224,.55),
     inset 0 1px 0 rgba(255,255,255,.50),
     inset 0 -10px 22px rgba(60,45,100,.12);
-  animation:coreBeat 2.4s ease-in-out infinite, coreGlow 2.4s ease-in-out infinite;
+  animation:coreBeat 3.4s ease-in-out infinite, coreGlow 3.4s ease-in-out infinite;
 }
 @keyframes coreBeat{0%,100%{transform:translate3d(0,0,var(--z,44px)) scale(1.05)}
   50%{transform:translate3d(0,-12px,var(--z,44px)) scale(1.13)}}
@@ -89,7 +89,7 @@
    Make them bright brand-orange energy streaming continuously into the core. */
 .home-hero .eng-links .lk{stroke:#F47920;stroke-width:3;opacity:.92;stroke-linecap:round;
   stroke-dasharray:10 12;filter:drop-shadow(0 0 3px rgba(244,121,32,.5));
-  animation:flowIn .7s linear infinite}
+  animation:flowIn 1s linear infinite}
 @keyframes flowIn{from{stroke-dashoffset:0}to{stroke-dashoffset:-44}}
 
 /* chips clear of the diamond */
